@@ -110,3 +110,166 @@ public class PlanPodrozy
         listaUczestnikow.Add(uczestnik);
     }
 }
+public abstract class PunktHarmonogramu: IComparable<PunktHarmonogramu>
+{
+    private string nazwa;
+    private DateTime czasStart;
+    private DateTime czasKoniec;
+    private double szacowanyKoszt;
+
+    protected PunktHartmonogramy(string nazwa, DateTime czasStart,DateTime czasKoniec,double szacowanyKoszt){
+        if (string.IsNullOrWhiteSpace(nazwa))
+            throw new ArgumentException("Nazwa nie może być pusta," nameof(nazwa));
+        if (czasKoniec<czasStrat)
+            throw new ArgumentException("Czas zakończenia nie może być wcześniejszy niż czas rozpoczęcia.");
+        if (szacowanyKoszt <0)
+            throw new ArgumentException("Koszt nie może być ujemny.");
+        
+        this.nazwa=nazwa;
+        this.czasStart=czasStrat;
+        this.czasKoniec=czasKoniec;
+        this.szacowanyKoszt=szacowanyKoszt;
+    }
+
+    public TimeSpan ObliczCzasTrwania(){
+        retuen czasKoniec-czasStrat;
+    }
+
+    public bool CzyKoliduje(PunktHarmonogramu innyPunkt){
+        if(innyPunkt==null) return false;
+        return this.czasStart<innyPunkt.czasKoniec && innyPunkt.czasSTart<this.czasKoniec;
+    }
+
+    public abstract void PokazSzczegoly();
+
+    public int CompareTo(PunktHarmonogramu inny){
+        if(inny==null) return 1;
+        return this.czasStart.CompareTo(inny.CzasStart);
+    }
+}
+public class Atrakcja: PunktHarmonogramu, IWymagaRezerwacji
+{
+    private string typAtrakcji;
+    private string krotkiOpis;
+
+    public Atrakcja(string nazwa, DateTime czasStart, DateTime czasKoniec, double szacowanyKoszt, 
+                    string typAtrakcji, string krotkiOpis) 
+        : base(nazwa, czasStart, czasKoniec, szacowanyKoszt){
+        this.typAtrakcji=typAtrakcji;
+        this.krotkiOpis=krotkiOpis;
+    }
+    public void PokazSzczegoly(){
+        Console.WriteLine($"[Atrakcja] {nazwa} ({typAtrakcji})");
+        Console.WriteLine($"Czas: {czasStart:dd.MM HH.mm}-{czasKoniec:HH.mm}");
+        Console.WriteLine($"Koszt; {szacowanyKoszt:C}");
+        Console.WriteLine($"Opis: {krotkiOpis}")
+    }
+    public bool WykonajRezerwacje()
+    {
+        Console.WriteLine($"Rezerwacja atrakcji '{nazwa}' przebiegła pomyślnie.");
+        return true;
+    }
+
+    public bool AnulujRezerwacje()
+    {
+        Console.WriteLine($"Anulowano rezerwację atrakcji '{nazwa}'.");
+        return true;
+    }
+}
+public class Zakwaterowanie: PunktHarmonogramu, IWymagaRezerwacji
+{
+    private string nazwaObiektu;
+    private string adres;
+    private bool wliczoneSniadanie;
+
+    public Zakwaterowanie(string nazwa, DateTime czasStart, DateTime czasKoniec, double szacowanyKoszt, 
+                          string nazwaObiektu, string adres, bool wliczoneSniadanie) 
+        : base(nazwa, czasStart, czasKoniec, szacowanyKoszt)
+        {
+            this.nazwaObiektu=nazwaObiektu;
+            this.adres=adres;
+            this.wliczoneSniadanie=wliczoneSniadanie;
+        }
+
+    public override void PokazSzczegoly()
+    {
+        string sniadanieInfo = wliczoneSniadanie ? "Tak" : "Nie";
+        
+        Console.WriteLine($"[Zakwaterowanie] {nazwa}");
+        Console.WriteLine($"Obiekt: {nazwaObiektu}, Adres: {adres}");
+        Console.WriteLine($"Zameldowanie: {czasStart:dd.MM HH:mm} | Wymeldowanie: {czasKoniec:dd.MM HH:mm}");
+        Console.WriteLine($"Koszt: {szacowanyKoszt:C} | Śniadanie wliczone: {sniadanieInfo}");
+    }
+
+    public bool WykonajRezerwacje(){
+        Console.WriteLine($"Zarezerwowano nocleg w obiekcie '{nazwaObiektu}'.");
+        return true;
+    }
+
+    public bool AnulujRezerwacje(){
+        Console.WriteLine($"Anulowano rezerwację noclegu w obiekcie '{nazwaObiektu}'.");
+        return true;
+    }
+}
+
+public class Transport: PunktHarmonogramu
+{
+    private string srodekTransportu;
+    private string miejsceOdjazdu;
+    private string miejscePrzyjazdu;
+
+    public Transport(string nazwa, DateTime czasStart, DateTime czasKoniec, double szacowanyKoszt,
+                     string srodekTransportu,string miejsceOdjazdu,string miejscePrzyjazdu)
+        :base(nazwa, czasStart, czasKoniec, szacowanyKoszt)
+        {
+            this.srodekTransportu=srodekTransportu;
+            this.miejsceOdjazdu=miejsceOdjazdu;
+            this.miejscePrzyjazdu=miejscePrzyjazdu;
+        }
+    public override void PoazSzczegoly()
+    {
+        Console.WriteLine($"Środek transportu: {srodekTransportu}.");
+        Console.WriteLine($"Miejsce odjazdu: {miejsceOdjazdu}");
+        Console.WriteLine($"Miejsce przyjazdu: {miejscePrzyjazdu}");
+    }           
+}
+
+public class TransportPubliczny: Transport, IWymagaRezerwacji
+{
+    private string numerLini;
+    private string rodzajBiletu;
+
+    public TransportPubliczny(string srodekTransportu,string miejsceOdjazdu, string miejscePrzyjazdu
+                              string numerLini,string rodzajBiletu)
+        :base(srodekTransportu,miejsceOdjazdu,miejscePrzyjazdu)
+        {
+            this.numerLini=numerLini;
+            this.rodzajBiletu=rodzajBiletu;
+        }
+
+    public override void PokazSzczegoly()
+    {
+        Console.WriteLine($"Numer lini: {numerLini}");
+        Console.WriteLine($"Rodzaj biletu: {rodzajBiletu}");
+
+    }
+    public bool WykonajRezerwacje(){
+        Console.WriteLine($"Zarezerwowano przejazd");
+        return true;
+    }
+
+    public bool AnulujRezerwacje(){
+        Console.WriteLine($"Anulowano przejazd");
+        return true;
+    }
+}
+
+public class TransportPrywatny: Transport
+{
+
+}
+public interface IWymagaRezerwacji
+{
+    bool WykonajRezerwacje();
+    bool AnulujRezerwacje();
+}
