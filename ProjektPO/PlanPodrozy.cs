@@ -110,19 +110,55 @@ public class PlanPodrozy
         listaUczestnikow.Add(uczestnik);
     }
 }
+
+public class Uczestnik
+{
+    public string Imie { get; }
+    public string Nazwisko { get; }
+
+    public int wiek { get;}
+
+    public Uczestnik(string imie, string nazwisko, int wiek)
+    {
+        if (string.IsNullOrWhiteSpace(imie))
+        {
+            throw new ArgumentException("Imię nie może być puste.");
+        }
+        if (string.IsNullOrWhiteSpace(nazwisko))
+        {
+            throw new ArgumentException("Nazwisko nie może być puste.");
+        }
+        if (wiek < 0)
+        {
+            throw new ArgumentException("Wiek nie może być ujemny.");
+        }
+        Imie = imie;
+        Nazwisko = nazwisko;
+        this.wiek = wiek;
+    }
+
+    public string PobierzPelneDane()
+    {
+        return $"{Imie} {Nazwisko} ({wiek} lat)";
+    }
+    public bool CzyJestPelnoletni()
+    {
+        return wiek >= 18;
+    }
+}
 public abstract class PunktHarmonogramu: IComparable<PunktHarmonogramu>
 {
-    private string nazwa;
-    private DateTime czasStart;
-    private DateTime czasKoniec;
-    private double szacowanyKoszt;
+    protected string nazwa;
+    protected DateTime czasStart;
+    protected DateTime czasKoniec;
+    protected double szacowanyKoszt;
 
-    public string Nazwa => nazwa;
+    /*public string Nazwa => nazwa;
     public DateTime CzasStart => czasStart;
-    public DateTime CzasKoniec => czasKoniec;
+    public DateTime CzasKoniec => czasKoniec;*/
     public double SzacowanyKoszt => szacowanyKoszt;
 
-    protected PunktHartmonogramy(string nazwa, DateTime czasStart,DateTime czasKoniec,double szacowanyKoszt){
+    protected PunktHarmonogramu(string nazwa, DateTime czasStart,DateTime czasKoniec,double szacowanyKoszt){
         if (string.IsNullOrWhiteSpace(nazwa))
             throw new ArgumentException("Nazwa nie może być pusta", nameof(nazwa));
         if (czasKoniec<czasStart)
@@ -142,14 +178,24 @@ public abstract class PunktHarmonogramu: IComparable<PunktHarmonogramu>
 
     public bool CzyKoliduje(PunktHarmonogramu innyPunkt){
         if(innyPunkt==null) return false;
-        return this.czasStart<innyPunkt.czasKoniec && innyPunkt.czasSTart<this.czasKoniec;
+        return this.czasStart<innyPunkt.czasKoniec && innyPunkt.czasStart<this.czasKoniec;
     }
 
     public abstract void PokazSzczegoly();
 
     public int CompareTo(PunktHarmonogramu inny){
         if(inny==null) return 1;
-        return this.czasStart.CompareTo(inny.CzasStart);
+        return this.czasStart.CompareTo(inny.czasStart);
+    }
+}
+
+public class KolizjaTerminowException: Exception
+{
+    public PunktHarmonogramu IstniejacyPunkt { get; }
+
+    public KolizjaTerminowException(PunktHarmonogramu istniejacyPunkt, string message) : base(message)
+    {
+        IstniejacyPunkt = istniejacyPunkt;
     }
 }
 public class Atrakcja: PunktHarmonogramu, IWymagaRezerwacji
@@ -272,6 +318,18 @@ public class TransportPubliczny: Transport, IWymagaRezerwacji
 
 public class TransportPrywatny: Transport
 {
+    private double kosztPaliwa;
+    public TransportPrywatny(string nazwa, DateTime czasStart, DateTime czasKoniec, double szacowanyKoszt,
+                              string srodekTransportu, string miejsceOdjazdu, string miejscePrzyjazdu,
+                              double kosztPaliwa)
+        : base(nazwa, czasStart, czasKoniec, szacowanyKoszt, srodekTransportu, miejsceOdjazdu, miejscePrzyjazdu)
+        {
+            this.kosztPaliwa=kosztPaliwa;
+        }
+    
+    public double ObliczKosztPaliwa(){
+        return kosztPaliwa;
+    }
 
 }
 public interface IWymagaRezerwacji
