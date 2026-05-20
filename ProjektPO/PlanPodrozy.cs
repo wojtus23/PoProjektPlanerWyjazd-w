@@ -117,22 +117,27 @@ public abstract class PunktHarmonogramu: IComparable<PunktHarmonogramu>
     private DateTime czasKoniec;
     private double szacowanyKoszt;
 
+    public string Nazwa => nazwa;
+    public DateTime CzasStart => czasStart;
+    public DateTime CzasKoniec => czasKoniec;
+    public double SzacowanyKoszt => szacowanyKoszt;
+
     protected PunktHartmonogramy(string nazwa, DateTime czasStart,DateTime czasKoniec,double szacowanyKoszt){
         if (string.IsNullOrWhiteSpace(nazwa))
-            throw new ArgumentException("Nazwa nie może być pusta," nameof(nazwa));
-        if (czasKoniec<czasStrat)
-            throw new ArgumentException("Czas zakończenia nie może być wcześniejszy niż czas rozpoczęcia.");
+            throw new ArgumentException("Nazwa nie może być pusta", nameof(nazwa));
+        if (czasKoniec<czasStart)
+            throw new ArgumentException("Czas zakończenia nie może być wcześniejszy niż czas rozpoczęcia.", nameof(czasKoniec));
         if (szacowanyKoszt <0)
-            throw new ArgumentException("Koszt nie może być ujemny.");
+            throw new ArgumentException("Koszt nie może być ujemny.", nameof(szacowanyKoszt));
         
         this.nazwa=nazwa;
-        this.czasStart=czasStrat;
+        this.czasStart=czasStart;
         this.czasKoniec=czasKoniec;
         this.szacowanyKoszt=szacowanyKoszt;
     }
 
     public TimeSpan ObliczCzasTrwania(){
-        retuen czasKoniec-czasStrat;
+        return czasKoniec-czasStart;
     }
 
     public bool CzyKoliduje(PunktHarmonogramu innyPunkt){
@@ -158,11 +163,11 @@ public class Atrakcja: PunktHarmonogramu, IWymagaRezerwacji
         this.typAtrakcji=typAtrakcji;
         this.krotkiOpis=krotkiOpis;
     }
-    public void PokazSzczegoly(){
+    public override void PokazSzczegoly(){
         Console.WriteLine($"[Atrakcja] {nazwa} ({typAtrakcji})");
         Console.WriteLine($"Czas: {czasStart:dd.MM HH.mm}-{czasKoniec:HH.mm}");
         Console.WriteLine($"Koszt; {szacowanyKoszt:C}");
-        Console.WriteLine($"Opis: {krotkiOpis}")
+        Console.WriteLine($"Opis: {krotkiOpis}");
     }
     public bool WykonajRezerwacje()
     {
@@ -226,7 +231,7 @@ public class Transport: PunktHarmonogramu
             this.miejsceOdjazdu=miejsceOdjazdu;
             this.miejscePrzyjazdu=miejscePrzyjazdu;
         }
-    public override void PoazSzczegoly()
+    public override void PokazSzczegoly()
     {
         Console.WriteLine($"Środek transportu: {srodekTransportu}.");
         Console.WriteLine($"Miejsce odjazdu: {miejsceOdjazdu}");
@@ -239,9 +244,10 @@ public class TransportPubliczny: Transport, IWymagaRezerwacji
     private string numerLini;
     private string rodzajBiletu;
 
-    public TransportPubliczny(string srodekTransportu,string miejsceOdjazdu, string miejscePrzyjazdu
-                              string numerLini,string rodzajBiletu)
-        :base(srodekTransportu,miejsceOdjazdu,miejscePrzyjazdu)
+    public TransportPubliczny(string nazwa, DateTime czasStart, DateTime czasKoniec, double szacowanyKoszt,
+                              string srodekTransportu, string miejsceOdjazdu, string miejscePrzyjazdu,
+                              string numerLini, string rodzajBiletu)
+        : base(nazwa, czasStart, czasKoniec, szacowanyKoszt, srodekTransportu, miejsceOdjazdu, miejscePrzyjazdu)
         {
             this.numerLini=numerLini;
             this.rodzajBiletu=rodzajBiletu;
