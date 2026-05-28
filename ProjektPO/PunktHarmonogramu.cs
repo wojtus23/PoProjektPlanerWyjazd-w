@@ -1,43 +1,51 @@
 using System;
-public abstract class PunktHarmonogramu: IComparable<PunktHarmonogramu>
+
+public abstract class PunktHarmonogramu : IComparable<PunktHarmonogramu>
 {
     protected string nazwa;
     protected DateTime czasStart;
     protected DateTime czasKoniec;
     protected double szacowanyKoszt;
 
-    /*public string Nazwa => nazwa;
-    public DateTime CzasStart => czasStart;
-    public DateTime CzasKoniec => czasKoniec;*/
     public double SzacowanyKoszt => szacowanyKoszt;
 
-    protected PunktHarmonogramu(string nazwa, DateTime czasStart,DateTime czasKoniec,double szacowanyKoszt){
+    protected PunktHarmonogramu(string nazwa, DateTime czasStart, DateTime czasKoniec, double szacowanyKoszt)
+    {
         if (string.IsNullOrWhiteSpace(nazwa))
-            throw new ArgumentException("Nazwa nie może być pusta", nameof(nazwa));
-        if (czasKoniec<czasStart)
-            throw new ArgumentException("Czas zakończenia nie może być wcześniejszy niż czas rozpoczęcia.", nameof(czasKoniec));
-        if (szacowanyKoszt <0)
+            throw new ArgumentException("Nazwa nie może być pusta.", nameof(nazwa));
+
+        if (czasKoniec <= czasStart)
+            throw new ArgumentException("Czas zakończenia musi być późniejszy niż czas rozpoczęcia.", nameof(czasKoniec));
+
+        if (szacowanyKoszt < 0)
             throw new ArgumentException("Koszt nie może być ujemny.", nameof(szacowanyKoszt));
-        
-        this.nazwa=nazwa;
-        this.czasStart=czasStart;
-        this.czasKoniec=czasKoniec;
-        this.szacowanyKoszt=szacowanyKoszt;
+
+        this.nazwa = nazwa;
+        this.czasStart = czasStart;
+        this.czasKoniec = czasKoniec;
+        this.szacowanyKoszt = szacowanyKoszt;
     }
 
-    public TimeSpan ObliczCzasTrwania(){
-        return czasKoniec-czasStart;
+    public TimeSpan ObliczCzasTrwania()
+    {
+        return czasKoniec - czasStart;
     }
 
-    public bool CzyKoliduje(PunktHarmonogramu innyPunkt){
-        if(innyPunkt==null) return false;
-        return this.czasStart<innyPunkt.czasKoniec && innyPunkt.czasStart<this.czasKoniec;
+    public bool CzyKoliduje(PunktHarmonogramu innyPunkt)
+    {
+        if (innyPunkt == null) 
+            return false;
+
+        return this.czasStart < innyPunkt.czasKoniec && innyPunkt.czasStart < this.czasKoniec;
     }
 
     public abstract void PokazSzczegoly();
 
-    public int CompareTo(PunktHarmonogramu inny){
-        if(inny==null) return 1;
+    public int CompareTo(PunktHarmonogramu? inny)
+    {
+        if (inny == null) 
+            return 1;
+
         return this.czasStart.CompareTo(inny.czasStart);
     }
 }
