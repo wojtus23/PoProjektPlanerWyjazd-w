@@ -110,9 +110,3 @@ public class PlanPodrozy
         listaUczestnikow.Add(uczestnik);
     }
 }
-
-
-
-
-
-
