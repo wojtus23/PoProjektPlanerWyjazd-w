@@ -1,31 +1,37 @@
 using System;
-public class TransportPubliczny: Transport, IWymagaRezerwacji
+
+public class TransportPubliczny : Transport, IWymagaRezerwacji
 {
     private string numerLini;
-    private string rodzajBiletu;
+    private RodzajBiletu rodzajBiletu;
 
     public TransportPubliczny(string nazwa, DateTime czasStart, DateTime czasKoniec, double szacowanyKoszt,
                               string srodekTransportu, string miejsceOdjazdu, string miejscePrzyjazdu,
-                              string numerLini, string rodzajBiletu)
-        : base(nazwa, czasStart, czasKoniec, szacowanyKoszt, srodekTransportu, miejsceOdjazdu, miejscePrzyjazdu)
-        {
-            this.numerLini=numerLini;
-            this.rodzajBiletu=rodzajBiletu;
-        }
+                              string numerLini, RodzajBiletu rodzajBiletu)
+        : base(nazwa, czasStart, czasKoniec, szacowanyKoszt, srodekTransportu, miejsceOdjazdu, miejscePrzyjazdu, TypPunktu.TransportPubliczny)
+    {
+        this.numerLini = numerLini;
+        this.rodzajBiletu = rodzajBiletu;
+    }
 
     public override void PokazSzczegoly()
     {
-        Console.WriteLine($"Numer lini: {numerLini}");
+        base.PokazSzczegoly();
+        Console.WriteLine($"Numer linii: {numerLini}");
         Console.WriteLine($"Rodzaj biletu: {rodzajBiletu}");
-
     }
-    public bool WykonajRezerwacje(){
-        Console.WriteLine($"Zarezerwowano przejazd");
+
+    public bool WykonajRezerwacje()
+    {
+        stanRezerwacji = stanRezerwacji.Zarezerwowana;
+        Console.WriteLine($"Zarezerwowano przejazd linią '{numerLini}'.");
         return true;
     }
 
-    public bool AnulujRezerwacje(){
-        Console.WriteLine($"Anulowano przejazd");
+    public bool AnulujRezerwacje()
+    {
+        stanRezerwacji = stanRezerwacji.Anulowana;
+        Console.WriteLine($"Anulowano przejazd linią '{numerLini}'.");
         return true;
     }
 }

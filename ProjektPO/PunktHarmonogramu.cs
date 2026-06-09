@@ -6,10 +6,12 @@ public abstract class PunktHarmonogramu : IComparable<PunktHarmonogramu>
     protected DateTime czasStart;
     protected DateTime czasKoniec;
     protected double szacowanyKoszt;
+    protected TypPunktu typPunktu;
+    protected stanRezerwacji stanRezerwacji;
 
     public double SzacowanyKoszt => szacowanyKoszt;
 
-    protected PunktHarmonogramu(string nazwa, DateTime czasStart, DateTime czasKoniec, double szacowanyKoszt)
+    protected PunktHarmonogramu(string nazwa, DateTime czasStart, DateTime czasKoniec, double szacowanyKoszt, TypPunktu typPunktu)
     {
         if (string.IsNullOrWhiteSpace(nazwa))
             throw new ArgumentException("Nazwa nie może być pusta.", nameof(nazwa));
@@ -24,6 +26,8 @@ public abstract class PunktHarmonogramu : IComparable<PunktHarmonogramu>
         this.czasStart = czasStart;
         this.czasKoniec = czasKoniec;
         this.szacowanyKoszt = szacowanyKoszt;
+        this.typPunktu = typPunktu;
+        this.stanRezerwacji = stanRezerwacji.Oczekująca;
     }
 
     public TimeSpan ObliczCzasTrwania()
@@ -33,6 +37,8 @@ public abstract class PunktHarmonogramu : IComparable<PunktHarmonogramu>
 
     public bool CzyKoliduje(PunktHarmonogramu innyPunkt)
     {
+        if (innyPunkt.typPunktu != this.typPunktu)
+            return false;
         if (innyPunkt == null) 
             return false;
 
