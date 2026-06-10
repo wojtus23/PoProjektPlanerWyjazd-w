@@ -1,0 +1,15 @@
+C:\Users\dawid\Documents\GitHub\PoProjektPlanerWyjazd-w\ProjektPO\bin\Debug\net10.0\ProjektPO.exe
+C:\Users\dawid\Documents\GitHub\PoProjektPlanerWyjazd-w\ProjektPO\bin\Debug\net10.0\ProjektPO.deps.json
+C:\Users\dawid\Documents\GitHub\PoProjektPlanerWyjazd-w\ProjektPO\bin\Debug\net10.0\ProjektPO.runtimeconfig.json
+C:\Users\dawid\Documents\GitHub\PoProjektPlanerWyjazd-w\ProjektPO\bin\Debug\net10.0\ProjektPO.dll
+C:\Users\dawid\Documents\GitHub\PoProjektPlanerWyjazd-w\ProjektPO\bin\Debug\net10.0\ProjektPO.pdb
+C:\Users\dawid\Documents\GitHub\PoProjektPlanerWyjazd-w\ProjektPO\obj\Debug\net10.0\ProjektPO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dawid\Documents\GitHub\PoProjektPlanerWyjazd-w\ProjektPO\obj\Debug\net10.0\ProjektPO.AssemblyInfoInputs.cache
+C:\Users\dawid\Documents\GitHub\PoProjektPlanerWyjazd-w\ProjektPO\obj\Debug\net10.0\ProjektPO.AssemblyInfo.cs
+C:\Users\dawid\Documents\GitHub\PoProjektPlanerWyjazd-w\ProjektPO\obj\Debug\net10.0\ProjektPO.csproj.CoreCompileInputs.cache
+C:\Users\dawid\Documents\GitHub\PoProjektPlanerWyjazd-w\ProjektPO\obj\Debug\net10.0\ProjektPO.sourcelink.json
+C:\Users\dawid\Documents\GitHub\PoProjektPlanerWyjazd-w\ProjektPO\obj\Debug\net10.0\ProjektPO.dll
+C:\Users\dawid\Documents\GitHub\PoProjektPlanerWyjazd-w\ProjektPO\obj\Debug\net10.0\refint\ProjektPO.dll
+C:\Users\dawid\Documents\GitHub\PoProjektPlanerWyjazd-w\ProjektPO\obj\Debug\net10.0\ProjektPO.pdb
+C:\Users\dawid\Documents\GitHub\PoProjektPlanerWyjazd-w\ProjektPO\obj\Debug\net10.0\ProjektPO.genruntimeconfig.cache
+C:\Users\dawid\Documents\GitHub\PoProjektPlanerWyjazd-w\ProjektPO\obj\Debug\net10.0\ref\ProjektPO.dll

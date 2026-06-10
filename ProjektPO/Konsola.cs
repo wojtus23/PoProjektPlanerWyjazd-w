@@ -2,8 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
+/// @brief Klasa narzędziowa odpowiadająca za interakcję z użytkownikiem w konsoli.
 public class Konsola
 {
+    /// @brief Pobiera numeryczny wybór od użytkownika z walidacją danych.
+    /// @return Zwraca liczbę całkowitą wybraną przez użytkownika.
     public int PobierzWybor()
     {
         while (true)
@@ -18,6 +21,9 @@ public class Konsola
         }
     }
 
+    /// @brief Wymusza od użytkownika wprowadzenie niepustego ciągu znaków.
+    /// @param prompt Komunikat wyświetlany użytkownikowi.
+    /// @return Zwraca wprowadzony ciąg znaków.
     public string PobierzTekst(string prompt)
     {
         while (true)
@@ -32,6 +38,9 @@ public class Konsola
         }
     }
 
+    /// @brief Odczytuje datę w formacie dd.MM.yyyy, pilnując by nie dotyczyła przeszłości.
+    /// @param prompt Komunikat wyświetlany użytkownikowi.
+    /// @return Poprawnie sformatowana data.
     public DateTime PobierzDate(string prompt)
     {
         while (true)
@@ -51,6 +60,7 @@ public class Konsola
         }
     }
 
+    /// @brief Wyświetla główne menu aplikacji w oknie konsoli.
     public static void WyswietlMenu()
     {
         Console.WriteLine("=== Plan Podróży ===");
@@ -62,6 +72,9 @@ public class Konsola
         Console.WriteLine("6. Wyjdź");
     }
 
+    /// @brief Przeprowadza przez proces tworzenia nowego planu podróży.
+    /// @param konsola Instancja konsoli do pobierania danych.
+    /// @param plan Nowo utworzony obiekt PlanPodrozy (parametr wyjściowy).
     public static void utworzPlanPodrozy(Konsola konsola, out PlanPodrozy plan)
     {
         string tytul = konsola.PobierzTekst("Podaj tytuł podróży: ");
@@ -82,6 +95,9 @@ public class Konsola
         Console.WriteLine("✓ Plan podróży utworzony pomyślnie!");
     }
 
+    /// @brief Dodaje uczestnika wyjazdu za pomocą konsoli.
+    /// @param konsola Instancja konsoli do pobierania danych.
+    /// @param plan Aktualny plan podróży.
     public static void dodajUczestnika(Konsola konsola, PlanPodrozy plan)
     {
         string imie = konsola.PobierzTekst("Podaj imię uczestnika: ");
@@ -102,6 +118,9 @@ public class Konsola
         Console.WriteLine("✓ Uczestnik dodany pomyślnie!");
     }
 
+    /// @brief Obsługuje proces dodawania punktu harmonogramu (Atrakcja, Transport, itp.).
+    /// @param konsola Instancja konsoli do pobierania danych.
+    /// @param plan Aktualny plan podróży.
     public static void dodajPunkt(Konsola konsola, PlanPodrozy plan)
     {
         Console.WriteLine("Wybierz typ punktu harmonogramu:");
@@ -201,6 +220,9 @@ public class Konsola
         }
     }
 
+    /// @brief Obsługuje proces usuwania punktu harmonogramu.
+    /// @param konsola Instancja konsoli do pobierania danych.
+    /// @param plan Aktualny plan podróży.
     public static void usunPunkt(Konsola konsola, PlanPodrozy plan)
     {
         Console.Write("Podaj identyfikator punktu do usunięcia: ");
@@ -218,6 +240,8 @@ public class Konsola
         Console.WriteLine("✓ Punkt usunięty pomyślnie!");
     }
 
+    /// @brief Wywołuje generator podsumowania dla utworzonego planu podróży.
+    /// @param plan Aktualny plan podróży do podsumowania.
     public static void generujPodsumowanie(PlanPodrozy plan)
     {
         plan.GenerujPodsumowanie();

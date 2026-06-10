@@ -1,11 +1,20 @@
 using System;
 
+/// @brief Klasa reprezentująca obiekt zakwaterowania w planie podróży.
 public class Zakwaterowanie : PunktHarmonogramu, IWymagaRezerwacji
 {
     private string nazwaObiektu;
     private string adres;
     private bool wliczoneSniadanie;
 
+    /// @brief Inicjalizuje nową instancję klasy Zakwaterowanie.
+    /// @param nazwa Nazwa punktu harmonogramu.
+    /// @param czasStart Data i czas zameldowania.
+    /// @param czasKoniec Data i czas wymeldowania.
+    /// @param szacowanyKoszt Przewidywany koszt zakwaterowania.
+    /// @param nazwaObiektu Nazwa hotelu, pensjonatu lub innego obiektu.
+    /// @param adres Adres obiektu zakwaterowania.
+    /// @param wliczoneSniadanie Wartość logiczna określająca, czy śniadanie jest wliczone w cenę.
     public Zakwaterowanie(string nazwa, DateTime czasStart, DateTime czasKoniec, double szacowanyKoszt,
                           string nazwaObiektu, string adres, bool wliczoneSniadanie)
         : base(nazwa, czasStart, czasKoniec, szacowanyKoszt, TypPunktu.Zakwaterowanie)
@@ -15,6 +24,7 @@ public class Zakwaterowanie : PunktHarmonogramu, IWymagaRezerwacji
         this.wliczoneSniadanie = wliczoneSniadanie;
     }
 
+    /// @brief Wyświetla szczegółowe informacje dotyczące miejsca noclegowego w konsoli.
     public override void PokazSzczegoly()
     {
         string sniadanieInfo = wliczoneSniadanie ? "Tak" : "Nie";
@@ -26,6 +36,8 @@ public class Zakwaterowanie : PunktHarmonogramu, IWymagaRezerwacji
         Console.WriteLine($"Stan rezerwacji: {stanRezerwacji}");
     }
 
+    /// @brief Potwierdza rezerwację w obiekcie zakwaterowania.
+    /// @return Zwraca true po udanej rezerwacji.
     public bool WykonajRezerwacje()
     {
         stanRezerwacji = StanRezerwacji.Zarezerwowana;
@@ -33,6 +45,8 @@ public class Zakwaterowanie : PunktHarmonogramu, IWymagaRezerwacji
         return true;
     }
 
+    /// @brief Anuluje rezerwację w obiekcie noclegowym.
+    /// @return Zwraca true po pomyślnym anulowaniu rezerwacji.
     public bool AnulujRezerwacje()
     {
         stanRezerwacji = StanRezerwacji.Anulowana;

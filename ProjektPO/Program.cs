@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
+/// @brief Główna klasa programu, pełniąca rolę punktu wejściowego aplikacji.
 public class Program
 {
+    /// @brief Metoda startowa (Main) sterująca pętlą menu.
     static void Main()
     {
         Console.OutputEncoding = System.Text.Encoding.UTF8;

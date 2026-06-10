@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
+/// @brief Główna klasa zarządzająca planem podróży, uczestnikami i budżetem.
 public class PlanPodrozy
 {
     private string tytulPodrozy;
@@ -11,6 +12,12 @@ public class PlanPodrozy
     private List<PunktHarmonogramu> listaPunktow;
     private List<Uczestnik> listaUczestnikow;
 
+    /// @brief Inicjalizuje nowy plan podróży.
+    /// @param tytulPodrozy Tytuł wyjazdu.
+    /// @param dataRozpoczecia Data startu podróży.
+    /// @param dataZakonczenia Data zakończenia podróży.
+    /// @param budzetCalkowity Maksymalny zaplanowany budżet.
+    /// @throw ArgumentException Rzucany, gdy tytuł jest pusty, daty są nielogiczne lub budżet jest ujemny.
     public PlanPodrozy(string tytulPodrozy, DateTime dataRozpoczecia, DateTime dataZakonczenia, double budzetCalkowity)
     {
         if (string.IsNullOrWhiteSpace(tytulPodrozy))
@@ -30,6 +37,10 @@ public class PlanPodrozy
         this.listaUczestnikow = new List<Uczestnik>();
     }
 
+    /// @brief Dodaje nowy punkt do harmonogramu podróży.
+    /// @param punkt Punkt harmonogramu do dodania.
+    /// @throw ArgumentNullException Rzucany, gdy przekazany punkt jest nullem.
+    /// @throw KolizjaTerminowException Rzucany, gdy punkt nakłada się czasowo z innym wydarzeniem.
     public void DodajPunkt(PunktHarmonogramu punkt)
     {
         if (punkt == null)
@@ -48,6 +59,9 @@ public class PlanPodrozy
         listaPunktow.Sort();
     }
 
+    /// @brief Usuwa punkt z harmonogramu na podstawie jego indeksu.
+    /// @param id Identyfikator (indeks) punktu do usunięcia.
+    /// @throw ArgumentOutOfRangeException Rzucany, gdy indeks jest poza zakresem listy.
     public void UsunPunkt(int id)
     {
         if (id < 0 || id >= listaPunktow.Count)
@@ -56,11 +70,14 @@ public class PlanPodrozy
         listaPunktow.RemoveAt(id);
     }
 
+    /// @brief Oblicza sumaryczny koszt wszystkich zaplanowanych punktów harmonogramu.
+    /// @return Całkowity dotychczasowy koszt.
     public double ObliczKosztCalkowity()
     {
         return listaPunktow.Sum(p => p.SzacowanyKoszt);
     }
 
+    /// @brief Generuje i wyświetla podsumowanie planu podróży na konsoli.
     public void GenerujPodsumowanie()
     {
         double aktualnyKoszt = ObliczKosztCalkowity();
@@ -102,6 +119,9 @@ public class PlanPodrozy
         Console.WriteLine(new string('=', 60));
     }
 
+    /// @brief Dodaje nowego uczestnika wycieczki.
+    /// @param uczestnik Obiekt uczestnika do dodania.
+    /// @throw ArgumentNullException Rzucany, gdy przekazany uczestnik jest nullem.
     public void DodajUczestnika(Uczestnik uczestnik)
     {
         if (uczestnik == null)
