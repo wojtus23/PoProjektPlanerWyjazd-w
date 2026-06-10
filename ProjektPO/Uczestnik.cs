@@ -10,7 +10,7 @@ public class Uczestnik
     public string Nazwisko { get; }
 
     /// @brief Wiek uczestnika.
-    public int wiek { get;}
+    public int wiek { get; }
 
     /// @brief Inicjalizuje nową instancję klasy Uczestnik.
     /// @param imie Imię uczestnika.

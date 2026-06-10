@@ -11,4 +11,3 @@ public interface IWymagaRezerwacji
     /// @return Zwraca true, jeśli anulowanie się powiodło.
     bool AnulujRezerwacje();
 }
-

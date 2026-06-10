@@ -1,4 +1,5 @@
 using System;
+
 /// @brief Wyjątek rzucany w sytuacji, gdy nowy punkt harmonogramu nakłada się czasowo z już istniejącym.
 public class KolizjaTerminowException: Exception
 {

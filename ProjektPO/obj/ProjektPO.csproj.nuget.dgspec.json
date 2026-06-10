@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dawid\\Documents\\GitHub\\PoProjektPlanerWyjazd-w\\ProjektPO\\ProjektPO.csproj": {}
+    "c:\\Users\\dawid\\Documents\\GitHub\\PoProjektPlanerWyjazd-w\\ProjektPO\\ProjektPO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dawid\\Documents\\GitHub\\PoProjektPlanerWyjazd-w\\ProjektPO\\ProjektPO.csproj": {
+    "c:\\Users\\dawid\\Documents\\GitHub\\PoProjektPlanerWyjazd-w\\ProjektPO\\ProjektPO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dawid\\Documents\\GitHub\\PoProjektPlanerWyjazd-w\\ProjektPO\\ProjektPO.csproj",
+        "projectUniqueName": "c:\\Users\\dawid\\Documents\\GitHub\\PoProjektPlanerWyjazd-w\\ProjektPO\\ProjektPO.csproj",
         "projectName": "ProjektPO",
-        "projectPath": "C:\\Users\\dawid\\Documents\\GitHub\\PoProjektPlanerWyjazd-w\\ProjektPO\\ProjektPO.csproj",
+        "projectPath": "c:\\Users\\dawid\\Documents\\GitHub\\PoProjektPlanerWyjazd-w\\ProjektPO\\ProjektPO.csproj",
         "packagesPath": "C:\\Users\\dawid\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dawid\\Documents\\GitHub\\PoProjektPlanerWyjazd-w\\ProjektPO\\obj\\",
+        "outputPath": "c:\\Users\\dawid\\Documents\\GitHub\\PoProjektPlanerWyjazd-w\\ProjektPO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

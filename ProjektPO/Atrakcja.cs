@@ -3,7 +3,9 @@ using System;
 /// @brief Klasa reprezentująca atrakcję turystyczną w harmonogramie podróży.
 public class Atrakcja : PunktHarmonogramu, IWymagaRezerwacji
 {
+    /// @brief Typ atrakcji turystycznej.
     private string typAtrakcji;
+    /// @brief Krótki opis wydarzenia.
     private string krotkiOpis;
 
     /// @brief Inicjalizuje nową instancję klasy Atrakcja.

@@ -9,8 +9,8 @@ public class TransportPrywatny : Transport
     /// @param nazwa Nazwa etapu podróży.
     /// @param czasStart Czas wyjazdu.
     /// @param czasKoniec Czas dojazdu na miejsce.
-    /// @param szacowanyKoszt Szacowany koszt przejazdu (np. koszt paliwa i opłat drogowych).
-    /// @param srodekTransportu Pojazd (np. Samochód osobowy).
+    /// @param szacowanyKoszt Szacowany koszt przejazdu.
+    /// @param srodekTransportu Pojazd.
     /// @param miejsceOdjazdu Punkt startowy.
     /// @param miejscePrzyjazdu Punkt docelowy.
     public TransportPrywatny(string nazwa, DateTime czasStart, DateTime czasKoniec, double szacowanyKoszt,

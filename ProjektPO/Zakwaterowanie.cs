@@ -3,8 +3,11 @@ using System;
 /// @brief Klasa reprezentująca obiekt zakwaterowania w planie podróży.
 public class Zakwaterowanie : PunktHarmonogramu, IWymagaRezerwacji
 {
+    /// @brief Nazwa obiektu noclegowego.
     private string nazwaObiektu;
+    /// @brief Adres obiektu zakwaterowania.
     private string adres;
+    /// @brief Określa, czy śniadanie jest wliczone w cenę.
     private bool wliczoneSniadanie;
 
     /// @brief Inicjalizuje nową instancję klasy Zakwaterowanie.

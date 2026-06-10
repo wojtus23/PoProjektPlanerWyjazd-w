@@ -5,11 +5,17 @@ using System.Linq;
 /// @brief Główna klasa zarządzająca planem podróży, uczestnikami i budżetem.
 public class PlanPodrozy
 {
+    /// @brief Tytuł wyjazdu.
     private string tytulPodrozy;
+    /// @brief Data startu podróży.
     private DateTime dataRozpoczecia;
+    /// @brief Data zakończenia podróży.
     private DateTime dataZakonczenia; 
+    /// @brief Maksymalny zaplanowany budżet.
     private double budzetCalkowity;
+    /// @brief Lista zadeklarowanych punktów harmonogramu.
     private List<PunktHarmonogramu> listaPunktow;
+    /// @brief Lista uczestników biorących udział w wyjeździe.
     private List<Uczestnik> listaUczestnikow;
 
     /// @brief Inicjalizuje nowy plan podróży.
@@ -40,11 +46,17 @@ public class PlanPodrozy
     /// @brief Dodaje nowy punkt do harmonogramu podróży.
     /// @param punkt Punkt harmonogramu do dodania.
     /// @throw ArgumentNullException Rzucany, gdy przekazany punkt jest nullem.
+    /// @throw ArgumentException Rzucany, gdy punkt wykracza poza ramy wyjazdu.
     /// @throw KolizjaTerminowException Rzucany, gdy punkt nakłada się czasowo z innym wydarzeniem.
     public void DodajPunkt(PunktHarmonogramu punkt)
     {
         if (punkt == null)
             throw new ArgumentNullException(nameof(punkt), "Punkt harmonogramu nie może być pusty.");
+
+        if (punkt.CzasStart.Date < this.dataRozpoczecia.Date || punkt.CzasKoniec.Date > this.dataZakonczenia.Date)
+        {
+            throw new ArgumentException($"Punkt harmonogramu wykracza poza ramy wyjazdu! Twój wyjazd trwa od {dataRozpoczecia:dd.MM.yyyy} do {dataZakonczenia:dd.MM.yyyy}.");
+        }
 
         foreach (var istniejacyPunkt in listaPunktow)
         {
@@ -113,13 +125,14 @@ public class PlanPodrozy
         {
             foreach (var punkt in listaPunktow)
             {
-                punkt.PokazSzczegoly(); 
+                punkt.PokazSzczegoly();
+                Console.WriteLine(new string('-', 40));
             }
         }
         Console.WriteLine(new string('=', 60));
     }
 
-    /// @brief Dodaje nowego uczestnika wycieczki.
+    /// @brief Dodaje nowego uczestnika wycieczki do planu.
     /// @param uczestnik Obiekt uczestnika do dodania.
     /// @throw ArgumentNullException Rzucany, gdy przekazany uczestnik jest nullem.
     public void DodajUczestnika(Uczestnik uczestnik)

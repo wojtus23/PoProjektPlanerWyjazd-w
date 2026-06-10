@@ -14,8 +14,8 @@ public class TransportPubliczny : Transport, IWymagaRezerwacji
     /// @param srodekTransportu Rodzaj transportu publicznego (np. Pociąg, Autobus).
     /// @param miejsceOdjazdu Miejsce startu.
     /// @param miejscePrzyjazdu Miejsce docelowe.
-    /// @param numerLini Oznaczenie linii komunikacyjnej lub numer lotu/pociągu.
-    /// @param rodzajBiletu Typ biletu (np. Normalny, Ulgowy).
+    /// @param numerLini Oznaczenie linii komunikacyjnej.
+    /// @param rodzajBiletu Typ biletu.
     public TransportPubliczny(string nazwa, DateTime czasStart, DateTime czasKoniec, double szacowanyKoszt,
                               string srodekTransportu, string miejsceOdjazdu, string miejscePrzyjazdu,
                               string numerLini, RodzajBiletu rodzajBiletu)
