@@ -1,0 +1,457 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Planer wyjazdu: Dokumentacja klasy Konsola</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Planer wyjazdu
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano za pomocą Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_konsola.html','','class_konsola-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Dokumentacja klasy Konsola</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Klasa narzędziowa odpowiadająca za interakcję z użytkownikiem w konsoli.  
+ <a href="#details">Więcej...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:aa9372abf878a08b80be75a00d3176088" id="r_aa9372abf878a08b80be75a00d3176088"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aa9372abf878a08b80be75a00d3176088">PobierzWybor</a> ()</td></tr>
+<tr class="memdesc:aa9372abf878a08b80be75a00d3176088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pobiera numeryczny wybór od użytkownika z walidacją danych.  <br /></td></tr>
+<tr class="memitem:a5be83af5aa10328a2a7a0216e89f9905" id="r_a5be83af5aa10328a2a7a0216e89f9905"><td class="memItemLeft">string&#160;</td><td class="memItemRight"><a class="el" href="#a5be83af5aa10328a2a7a0216e89f9905">PobierzTekst</a> (string prompt)</td></tr>
+<tr class="memdesc:a5be83af5aa10328a2a7a0216e89f9905"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wymusza od użytkownika wprowadzenie niepustego ciągu znaków.  <br /></td></tr>
+<tr class="memitem:ac613a39010e1d1050c14d5f4eea939f8" id="r_ac613a39010e1d1050c14d5f4eea939f8"><td class="memItemLeft">DateTime&#160;</td><td class="memItemRight"><a class="el" href="#ac613a39010e1d1050c14d5f4eea939f8">PobierzDate</a> (string prompt)</td></tr>
+<tr class="memdesc:ac613a39010e1d1050c14d5f4eea939f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Odczytuje datę w formacie dd.MM.yyyy, pilnując by nie dotyczyła przeszłości.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Statyczne metody publiczne</h2></td></tr>
+<tr class="memitem:a86bae6739bf1fb2491ab592c18ded74c" id="r_a86bae6739bf1fb2491ab592c18ded74c"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a86bae6739bf1fb2491ab592c18ded74c">WyswietlMenu</a> ()</td></tr>
+<tr class="memdesc:a86bae6739bf1fb2491ab592c18ded74c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wyświetla główne menu aplikacji w oknie konsoli.  <br /></td></tr>
+<tr class="memitem:a28d35e81ac71766342c9bb8c159b858a" id="r_a28d35e81ac71766342c9bb8c159b858a"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a28d35e81ac71766342c9bb8c159b858a">utworzPlanPodrozy</a> (<a class="el" href="class_konsola.html">Konsola</a> konsola, out <a class="el" href="class_plan_podrozy.html">PlanPodrozy</a> plan)</td></tr>
+<tr class="memdesc:a28d35e81ac71766342c9bb8c159b858a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Przeprowadza przez proces tworzenia nowego planu podróży.  <br /></td></tr>
+<tr class="memitem:af2b8f391135c7e0296644f16b3dcb22d" id="r_af2b8f391135c7e0296644f16b3dcb22d"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#af2b8f391135c7e0296644f16b3dcb22d">dodajUczestnika</a> (<a class="el" href="class_konsola.html">Konsola</a> konsola, <a class="el" href="class_plan_podrozy.html">PlanPodrozy</a> plan)</td></tr>
+<tr class="memdesc:af2b8f391135c7e0296644f16b3dcb22d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dodaje uczestnika wyjazdu za pomocą konsoli.  <br /></td></tr>
+<tr class="memitem:a3716cf5ee47a04cd3cc6e932f3b0afe0" id="r_a3716cf5ee47a04cd3cc6e932f3b0afe0"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a3716cf5ee47a04cd3cc6e932f3b0afe0">dodajPunkt</a> (<a class="el" href="class_konsola.html">Konsola</a> konsola, <a class="el" href="class_plan_podrozy.html">PlanPodrozy</a> plan)</td></tr>
+<tr class="memdesc:a3716cf5ee47a04cd3cc6e932f3b0afe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obsługuje proces dodawania punktu harmonogramu (<a class="el" href="class_atrakcja.html" title="Klasa reprezentująca atrakcję turystyczną w harmonogramie podróży.">Atrakcja</a>, <a class="el" href="class_transport.html" title="Abstrakcyjna klasa bazowa reprezentująca środek przemieszczania się.">Transport</a>, itp.).  <br /></td></tr>
+<tr class="memitem:ae6b816703b6e51f2b6293da9bd363b39" id="r_ae6b816703b6e51f2b6293da9bd363b39"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ae6b816703b6e51f2b6293da9bd363b39">usunPunkt</a> (<a class="el" href="class_konsola.html">Konsola</a> konsola, <a class="el" href="class_plan_podrozy.html">PlanPodrozy</a> plan)</td></tr>
+<tr class="memdesc:ae6b816703b6e51f2b6293da9bd363b39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obsługuje proces usuwania punktu harmonogramu.  <br /></td></tr>
+<tr class="memitem:ad03c78c6809eabab356a0bafe5482147" id="r_ad03c78c6809eabab356a0bafe5482147"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ad03c78c6809eabab356a0bafe5482147">generujPodsumowanie</a> (<a class="el" href="class_plan_podrozy.html">PlanPodrozy</a> plan)</td></tr>
+<tr class="memdesc:ad03c78c6809eabab356a0bafe5482147"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wywołuje generator podsumowania dla utworzonego planu podróży.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Klasa narzędziowa odpowiadająca za interakcję z użytkownikiem w konsoli. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="a3716cf5ee47a04cd3cc6e932f3b0afe0" name="a3716cf5ee47a04cd3cc6e932f3b0afe0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3716cf5ee47a04cd3cc6e932f3b0afe0">&#9670;&#160;</a></span>dodajPunkt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Konsola.dodajPunkt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_konsola.html">Konsola</a></td>          <td class="paramname"><span class="paramname"><em>konsola</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_plan_podrozy.html">PlanPodrozy</a></td>          <td class="paramname"><span class="paramname"><em>plan</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obsługuje proces dodawania punktu harmonogramu (<a class="el" href="class_atrakcja.html" title="Klasa reprezentująca atrakcję turystyczną w harmonogramie podróży.">Atrakcja</a>, <a class="el" href="class_transport.html" title="Abstrakcyjna klasa bazowa reprezentująca środek przemieszczania się.">Transport</a>, itp.). </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">konsola</td><td>Instancja konsoli do pobierania danych. </td></tr>
+    <tr><td class="paramname">plan</td><td>Aktualny plan podróży. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af2b8f391135c7e0296644f16b3dcb22d" name="af2b8f391135c7e0296644f16b3dcb22d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2b8f391135c7e0296644f16b3dcb22d">&#9670;&#160;</a></span>dodajUczestnika()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Konsola.dodajUczestnika </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_konsola.html">Konsola</a></td>          <td class="paramname"><span class="paramname"><em>konsola</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_plan_podrozy.html">PlanPodrozy</a></td>          <td class="paramname"><span class="paramname"><em>plan</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dodaje uczestnika wyjazdu za pomocą konsoli. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">konsola</td><td>Instancja konsoli do pobierania danych. </td></tr>
+    <tr><td class="paramname">plan</td><td>Aktualny plan podróży. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad03c78c6809eabab356a0bafe5482147" name="ad03c78c6809eabab356a0bafe5482147"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad03c78c6809eabab356a0bafe5482147">&#9670;&#160;</a></span>generujPodsumowanie()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Konsola.generujPodsumowanie </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_plan_podrozy.html">PlanPodrozy</a></td>          <td class="paramname"><span class="paramname"><em>plan</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Wywołuje generator podsumowania dla utworzonego planu podróży. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plan</td><td>Aktualny plan podróży do podsumowania. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac613a39010e1d1050c14d5f4eea939f8" name="ac613a39010e1d1050c14d5f4eea939f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac613a39010e1d1050c14d5f4eea939f8">&#9670;&#160;</a></span>PobierzDate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DateTime Konsola.PobierzDate </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>prompt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Odczytuje datę w formacie dd.MM.yyyy, pilnując by nie dotyczyła przeszłości. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prompt</td><td>Komunikat wyświetlany użytkownikowi. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Poprawnie sformatowana data. </dd></dl>
+
+</div>
+</div>
+<a id="a5be83af5aa10328a2a7a0216e89f9905" name="a5be83af5aa10328a2a7a0216e89f9905"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5be83af5aa10328a2a7a0216e89f9905">&#9670;&#160;</a></span>PobierzTekst()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Konsola.PobierzTekst </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>prompt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wymusza od użytkownika wprowadzenie niepustego ciągu znaków. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prompt</td><td>Komunikat wyświetlany użytkownikowi. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Zwraca wprowadzony ciąg znaków. </dd></dl>
+
+</div>
+</div>
+<a id="aa9372abf878a08b80be75a00d3176088" name="aa9372abf878a08b80be75a00d3176088"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9372abf878a08b80be75a00d3176088">&#9670;&#160;</a></span>PobierzWybor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Konsola.PobierzWybor </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pobiera numeryczny wybór od użytkownika z walidacją danych. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>Zwraca liczbę całkowitą wybraną przez użytkownika. </dd></dl>
+
+</div>
+</div>
+<a id="ae6b816703b6e51f2b6293da9bd363b39" name="ae6b816703b6e51f2b6293da9bd363b39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6b816703b6e51f2b6293da9bd363b39">&#9670;&#160;</a></span>usunPunkt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Konsola.usunPunkt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_konsola.html">Konsola</a></td>          <td class="paramname"><span class="paramname"><em>konsola</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_plan_podrozy.html">PlanPodrozy</a></td>          <td class="paramname"><span class="paramname"><em>plan</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obsługuje proces usuwania punktu harmonogramu. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">konsola</td><td>Instancja konsoli do pobierania danych. </td></tr>
+    <tr><td class="paramname">plan</td><td>Aktualny plan podróży. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a28d35e81ac71766342c9bb8c159b858a" name="a28d35e81ac71766342c9bb8c159b858a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28d35e81ac71766342c9bb8c159b858a">&#9670;&#160;</a></span>utworzPlanPodrozy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Konsola.utworzPlanPodrozy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_konsola.html">Konsola</a></td>          <td class="paramname"><span class="paramname"><em>konsola</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out <a class="el" href="class_plan_podrozy.html">PlanPodrozy</a></td>          <td class="paramname"><span class="paramname"><em>plan</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Przeprowadza przez proces tworzenia nowego planu podróży. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">konsola</td><td>Instancja konsoli do pobierania danych. </td></tr>
+    <tr><td class="paramname">plan</td><td>Nowo utworzony obiekt <a class="el" href="class_plan_podrozy.html" title="Główna klasa zarządzająca planem podróży, uczestnikami i budżetem.">PlanPodrozy</a> (parametr wyjściowy). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a86bae6739bf1fb2491ab592c18ded74c" name="a86bae6739bf1fb2491ab592c18ded74c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86bae6739bf1fb2491ab592c18ded74c">&#9670;&#160;</a></span>WyswietlMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Konsola.WyswietlMenu </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Wyświetla główne menu aplikacji w oknie konsoli. </p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z pliku:<ul>
+<li>ProjektPO/<a class="el" href="_konsola_8cs.html">Konsola.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_konsola.html">Konsola</a></li>
+    <li class="footer">Wygenerowano za pomocą <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,186 @@
+\doxysection{Dokumentacja klasy Konsola}
+\hypertarget{class_konsola}{}\label{class_konsola}\index{Konsola@{Konsola}}
+
+
+Klasa narzędziowa odpowiadająca za interakcję z użytkownikiem w konsoli.  
+
+
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_konsola_aa9372abf878a08b80be75a00d3176088}{Pobierz\+Wybor}} ()
+\begin{DoxyCompactList}\small\item\em Pobiera numeryczny wybór od użytkownika z walidacją danych. \end{DoxyCompactList}\item 
+string \doxymbox{\hyperlink{class_konsola_a5be83af5aa10328a2a7a0216e89f9905}{Pobierz\+Tekst}} (string prompt)
+\begin{DoxyCompactList}\small\item\em Wymusza od użytkownika wprowadzenie niepustego ciągu znaków. \end{DoxyCompactList}\item 
+Date\+Time \doxymbox{\hyperlink{class_konsola_ac613a39010e1d1050c14d5f4eea939f8}{Pobierz\+Date}} (string prompt)
+\begin{DoxyCompactList}\small\item\em Odczytuje datę w formacie dd.\+MM.\+yyyy, pilnując by nie dotyczyła przeszłości. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static void \doxymbox{\hyperlink{class_konsola_a86bae6739bf1fb2491ab592c18ded74c}{Wyswietl\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Wyświetla główne menu aplikacji w oknie konsoli. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{class_konsola_a28d35e81ac71766342c9bb8c159b858a}{utworz\+Plan\+Podrozy}} (\doxymbox{\hyperlink{class_konsola}{Konsola}} konsola, out \doxymbox{\hyperlink{class_plan_podrozy}{Plan\+Podrozy}} plan)
+\begin{DoxyCompactList}\small\item\em Przeprowadza przez proces tworzenia nowego planu podróży. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{class_konsola_af2b8f391135c7e0296644f16b3dcb22d}{dodaj\+Uczestnika}} (\doxymbox{\hyperlink{class_konsola}{Konsola}} konsola, \doxymbox{\hyperlink{class_plan_podrozy}{Plan\+Podrozy}} plan)
+\begin{DoxyCompactList}\small\item\em Dodaje uczestnika wyjazdu za pomocą konsoli. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{class_konsola_a3716cf5ee47a04cd3cc6e932f3b0afe0}{dodaj\+Punkt}} (\doxymbox{\hyperlink{class_konsola}{Konsola}} konsola, \doxymbox{\hyperlink{class_plan_podrozy}{Plan\+Podrozy}} plan)
+\begin{DoxyCompactList}\small\item\em Obsługuje proces dodawania punktu harmonogramu (\doxylink{class_atrakcja}{Atrakcja}, \doxylink{class_transport}{Transport}, itp.). \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{class_konsola_ae6b816703b6e51f2b6293da9bd363b39}{usun\+Punkt}} (\doxymbox{\hyperlink{class_konsola}{Konsola}} konsola, \doxymbox{\hyperlink{class_plan_podrozy}{Plan\+Podrozy}} plan)
+\begin{DoxyCompactList}\small\item\em Obsługuje proces usuwania punktu harmonogramu. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{class_konsola_ad03c78c6809eabab356a0bafe5482147}{generuj\+Podsumowanie}} (\doxymbox{\hyperlink{class_plan_podrozy}{Plan\+Podrozy}} plan)
+\begin{DoxyCompactList}\small\item\em Wywołuje generator podsumowania dla utworzonego planu podróży. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa narzędziowa odpowiadająca za interakcję z użytkownikiem w konsoli. 
+
+\label{class_konsola_doc-func-members}
+\Hypertarget{class_konsola_doc-func-members}
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_konsola_a3716cf5ee47a04cd3cc6e932f3b0afe0}\index{Konsola@{Konsola}!dodajPunkt@{dodajPunkt}}
+\index{dodajPunkt@{dodajPunkt}!Konsola@{Konsola}}
+\doxysubsubsection{\texorpdfstring{dodajPunkt()}{dodajPunkt()}}
+{\footnotesize\ttfamily \label{class_konsola_a3716cf5ee47a04cd3cc6e932f3b0afe0} 
+void Konsola.\+dodaj\+Punkt (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_konsola}{Konsola}}}]{konsola}{, }\item[{\doxymbox{\hyperlink{class_plan_podrozy}{Plan\+Podrozy}}}]{plan}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Obsługuje proces dodawania punktu harmonogramu (\doxylink{class_atrakcja}{Atrakcja}, \doxylink{class_transport}{Transport}, itp.). 
+
+
+\begin{DoxyParams}{Parametry}
+{\em konsola} & Instancja konsoli do pobierania danych. \\
+\hline
+{\em plan} & Aktualny plan podróży. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_konsola_af2b8f391135c7e0296644f16b3dcb22d}\index{Konsola@{Konsola}!dodajUczestnika@{dodajUczestnika}}
+\index{dodajUczestnika@{dodajUczestnika}!Konsola@{Konsola}}
+\doxysubsubsection{\texorpdfstring{dodajUczestnika()}{dodajUczestnika()}}
+{\footnotesize\ttfamily \label{class_konsola_af2b8f391135c7e0296644f16b3dcb22d} 
+void Konsola.\+dodaj\+Uczestnika (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_konsola}{Konsola}}}]{konsola}{, }\item[{\doxymbox{\hyperlink{class_plan_podrozy}{Plan\+Podrozy}}}]{plan}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Dodaje uczestnika wyjazdu za pomocą konsoli. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em konsola} & Instancja konsoli do pobierania danych. \\
+\hline
+{\em plan} & Aktualny plan podróży. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_konsola_ad03c78c6809eabab356a0bafe5482147}\index{Konsola@{Konsola}!generujPodsumowanie@{generujPodsumowanie}}
+\index{generujPodsumowanie@{generujPodsumowanie}!Konsola@{Konsola}}
+\doxysubsubsection{\texorpdfstring{generujPodsumowanie()}{generujPodsumowanie()}}
+{\footnotesize\ttfamily \label{class_konsola_ad03c78c6809eabab356a0bafe5482147} 
+void Konsola.\+generuj\+Podsumowanie (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_plan_podrozy}{Plan\+Podrozy}}}]{plan}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Wywołuje generator podsumowania dla utworzonego planu podróży. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em plan} & Aktualny plan podróży do podsumowania. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_konsola_ac613a39010e1d1050c14d5f4eea939f8}\index{Konsola@{Konsola}!PobierzDate@{PobierzDate}}
+\index{PobierzDate@{PobierzDate}!Konsola@{Konsola}}
+\doxysubsubsection{\texorpdfstring{PobierzDate()}{PobierzDate()}}
+{\footnotesize\ttfamily \label{class_konsola_ac613a39010e1d1050c14d5f4eea939f8} 
+Date\+Time Konsola.\+Pobierz\+Date (\begin{DoxyParamCaption}\item[{string}]{prompt}{}\end{DoxyParamCaption})}
+
+
+
+Odczytuje datę w formacie dd.\+MM.\+yyyy, pilnując by nie dotyczyła przeszłości. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em prompt} & Komunikat wyświetlany użytkownikowi. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Poprawnie sformatowana data. 
+\end{DoxyReturn}
+\Hypertarget{class_konsola_a5be83af5aa10328a2a7a0216e89f9905}\index{Konsola@{Konsola}!PobierzTekst@{PobierzTekst}}
+\index{PobierzTekst@{PobierzTekst}!Konsola@{Konsola}}
+\doxysubsubsection{\texorpdfstring{PobierzTekst()}{PobierzTekst()}}
+{\footnotesize\ttfamily \label{class_konsola_a5be83af5aa10328a2a7a0216e89f9905} 
+string Konsola.\+Pobierz\+Tekst (\begin{DoxyParamCaption}\item[{string}]{prompt}{}\end{DoxyParamCaption})}
+
+
+
+Wymusza od użytkownika wprowadzenie niepustego ciągu znaków. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em prompt} & Komunikat wyświetlany użytkownikowi. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Zwraca wprowadzony ciąg znaków. 
+\end{DoxyReturn}
+\Hypertarget{class_konsola_aa9372abf878a08b80be75a00d3176088}\index{Konsola@{Konsola}!PobierzWybor@{PobierzWybor}}
+\index{PobierzWybor@{PobierzWybor}!Konsola@{Konsola}}
+\doxysubsubsection{\texorpdfstring{PobierzWybor()}{PobierzWybor()}}
+{\footnotesize\ttfamily \label{class_konsola_aa9372abf878a08b80be75a00d3176088} 
+int Konsola.\+Pobierz\+Wybor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Pobiera numeryczny wybór od użytkownika z walidacją danych. 
+
+\begin{DoxyReturn}{Zwraca}
+Zwraca liczbę całkowitą wybraną przez użytkownika. 
+\end{DoxyReturn}
+\Hypertarget{class_konsola_ae6b816703b6e51f2b6293da9bd363b39}\index{Konsola@{Konsola}!usunPunkt@{usunPunkt}}
+\index{usunPunkt@{usunPunkt}!Konsola@{Konsola}}
+\doxysubsubsection{\texorpdfstring{usunPunkt()}{usunPunkt()}}
+{\footnotesize\ttfamily \label{class_konsola_ae6b816703b6e51f2b6293da9bd363b39} 
+void Konsola.\+usun\+Punkt (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_konsola}{Konsola}}}]{konsola}{, }\item[{\doxymbox{\hyperlink{class_plan_podrozy}{Plan\+Podrozy}}}]{plan}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Obsługuje proces usuwania punktu harmonogramu. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em konsola} & Instancja konsoli do pobierania danych. \\
+\hline
+{\em plan} & Aktualny plan podróży. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_konsola_a28d35e81ac71766342c9bb8c159b858a}\index{Konsola@{Konsola}!utworzPlanPodrozy@{utworzPlanPodrozy}}
+\index{utworzPlanPodrozy@{utworzPlanPodrozy}!Konsola@{Konsola}}
+\doxysubsubsection{\texorpdfstring{utworzPlanPodrozy()}{utworzPlanPodrozy()}}
+{\footnotesize\ttfamily \label{class_konsola_a28d35e81ac71766342c9bb8c159b858a} 
+void Konsola.\+utworz\+Plan\+Podrozy (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_konsola}{Konsola}}}]{konsola}{, }\item[{out \doxymbox{\hyperlink{class_plan_podrozy}{Plan\+Podrozy}}}]{plan}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Przeprowadza przez proces tworzenia nowego planu podróży. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em konsola} & Instancja konsoli do pobierania danych. \\
+\hline
+{\em plan} & Nowo utworzony obiekt \doxylink{class_plan_podrozy}{Plan\+Podrozy} (parametr wyjściowy). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_konsola_a86bae6739bf1fb2491ab592c18ded74c}\index{Konsola@{Konsola}!WyswietlMenu@{WyswietlMenu}}
+\index{WyswietlMenu@{WyswietlMenu}!Konsola@{Konsola}}
+\doxysubsubsection{\texorpdfstring{WyswietlMenu()}{WyswietlMenu()}}
+{\footnotesize\ttfamily \label{class_konsola_a86bae6739bf1fb2491ab592c18ded74c} 
+void Konsola.\+Wyswietl\+Menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Wyświetla główne menu aplikacji w oknie konsoli. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku:\+\begin{DoxyCompactItemize}
+\item 
+Projekt\+PO/\+\doxymbox{\hyperlink{_konsola_8cs}{Konsola.\+cs}}\end{DoxyCompactItemize}
