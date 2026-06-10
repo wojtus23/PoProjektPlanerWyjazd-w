@@ -1,0 +1,582 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Plan wyjazdu: Dokumentacja klasy PunktHarmonogramu</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Plan wyjazdu
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano za pomocą Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_punkt_harmonogramu.html','','class_punkt_harmonogramu-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Dokumentacja klasy PunktHarmonogramu<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Abstrakcyjna klasa bazowa reprezentująca pojedynczy punkt w harmonogramie podróży.  
+ <a href="#details">Więcej...</a></p>
+<div class="dynheader">
+Diagram dziedziczenia dla PunktHarmonogramu</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_punkt_harmonogramu.png" usemap="#PunktHarmonogramu_map" alt=""/>
+  <map id="PunktHarmonogramu_map" name="PunktHarmonogramu_map">
+<area href="class_atrakcja.html" title="Klasa reprezentująca atrakcję turystyczną w harmonogramie podróży." alt="Atrakcja" shape="rect" coords="0,112,129,136"/>
+<area href="class_transport.html" title="Abstrakcyjna klasa bazowa reprezentująca środek przemieszczania się." alt="Transport" shape="rect" coords="139,112,268,136"/>
+<area href="class_zakwaterowanie.html" title="Klasa reprezentująca obiekt zakwaterowania w planie podróży." alt="Zakwaterowanie" shape="rect" coords="278,112,407,136"/>
+<area href="class_transport_prywatny.html" title="Klasa reprezentująca przejazd prywatnym środkiem transportu." alt="TransportPrywatny" shape="rect" coords="69,168,198,192"/>
+<area href="class_transport_publiczny.html" title="Klasa reprezentująca środek transportu publicznego podlegający rezerwacji." alt="TransportPubliczny" shape="rect" coords="208,168,337,192"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a1d7e221953215d9ee3da208dd39ea97d" id="r_a1d7e221953215d9ee3da208dd39ea97d"><td class="memItemLeft">TimeSpan&#160;</td><td class="memItemRight"><a class="el" href="#a1d7e221953215d9ee3da208dd39ea97d">ObliczCzasTrwania</a> ()</td></tr>
+<tr class="memdesc:a1d7e221953215d9ee3da208dd39ea97d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oblicza czas trwania punktu harmonogramu.  <br /></td></tr>
+<tr class="memitem:aac8c2e65903f1f71d8dfcd41c964fec4" id="r_aac8c2e65903f1f71d8dfcd41c964fec4"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aac8c2e65903f1f71d8dfcd41c964fec4">CzyKoliduje</a> (<a class="el" href="class_punkt_harmonogramu.html">PunktHarmonogramu</a> innyPunkt)</td></tr>
+<tr class="memdesc:aac8c2e65903f1f71d8dfcd41c964fec4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprawdza, czy ten punkt nakłada się czasowo z innym punktem harmonogramu.  <br /></td></tr>
+<tr class="memitem:a8f6923afd3daeb0a8bda55ced9059e8c" id="r_a8f6923afd3daeb0a8bda55ced9059e8c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8f6923afd3daeb0a8bda55ced9059e8c">PokazSzczegoly</a> ()</td></tr>
+<tr class="memdesc:a8f6923afd3daeb0a8bda55ced9059e8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstrakcyjna metoda do wyświetlania szczegółów punktu harmonogramu w konsoli.  <br /></td></tr>
+<tr class="memitem:a69e6ec2d04e30b1fdd2b7a6cdd5e1fa7" id="r_a69e6ec2d04e30b1fdd2b7a6cdd5e1fa7"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a69e6ec2d04e30b1fdd2b7a6cdd5e1fa7">CompareTo</a> (<a class="el" href="class_punkt_harmonogramu.html">PunktHarmonogramu</a>? inny)</td></tr>
+<tr class="memdesc:a69e6ec2d04e30b1fdd2b7a6cdd5e1fa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Porównuje dwa punkty po czasie ich rozpoczęcia, co umożliwia ich sortowanie.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Metody chronione</h2></td></tr>
+<tr class="memitem:a4e4cb3574430476e7f283c0c75e1ec2d" id="r_a4e4cb3574430476e7f283c0c75e1ec2d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a4e4cb3574430476e7f283c0c75e1ec2d">PunktHarmonogramu</a> (string nazwa, DateTime czasStart, DateTime czasKoniec, double szacowanyKoszt, <a class="el" href="_enum_8cs.html#a0f3f914e1ac293bcd2b86c529aec61f8">TypPunktu</a> typPunktu)</td></tr>
+<tr class="memdesc:a4e4cb3574430476e7f283c0c75e1ec2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicjalizuje nową instancję klasy bazowej <a class="el" href="class_punkt_harmonogramu.html" title="Abstrakcyjna klasa bazowa reprezentująca pojedynczy punkt w harmonogramie podróży.">PunktHarmonogramu</a>.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Atrybuty chronione</h2></td></tr>
+<tr class="memitem:acd67e21afdd38fbba7fe5bf24df41ec1" id="r_acd67e21afdd38fbba7fe5bf24df41ec1"><td class="memItemLeft">string&#160;</td><td class="memItemRight"><a class="el" href="#acd67e21afdd38fbba7fe5bf24df41ec1">nazwa</a></td></tr>
+<tr class="memdesc:acd67e21afdd38fbba7fe5bf24df41ec1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nazwa punktu harmonogramu.  <br /></td></tr>
+<tr class="memitem:a7f85784f0e94f4cf67abed47d38a72d3" id="r_a7f85784f0e94f4cf67abed47d38a72d3"><td class="memItemLeft">DateTime&#160;</td><td class="memItemRight"><a class="el" href="#a7f85784f0e94f4cf67abed47d38a72d3">czasStart</a></td></tr>
+<tr class="memdesc:a7f85784f0e94f4cf67abed47d38a72d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Czas rozpoczęcia.  <br /></td></tr>
+<tr class="memitem:a2fc2eeebbb5a370fe9f29e1786cf4ea3" id="r_a2fc2eeebbb5a370fe9f29e1786cf4ea3"><td class="memItemLeft">DateTime&#160;</td><td class="memItemRight"><a class="el" href="#a2fc2eeebbb5a370fe9f29e1786cf4ea3">czasKoniec</a></td></tr>
+<tr class="memdesc:a2fc2eeebbb5a370fe9f29e1786cf4ea3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Czas zakończenia.  <br /></td></tr>
+<tr class="memitem:afbe242160cdc70cda8844ae7c080aeb1" id="r_afbe242160cdc70cda8844ae7c080aeb1"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#afbe242160cdc70cda8844ae7c080aeb1">szacowanyKoszt</a></td></tr>
+<tr class="memdesc:afbe242160cdc70cda8844ae7c080aeb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Przewidywany koszt.  <br /></td></tr>
+<tr class="memitem:a34cbba6fd8512cafd7c2a115bdb673a8" id="r_a34cbba6fd8512cafd7c2a115bdb673a8"><td class="memItemLeft"><a class="el" href="_enum_8cs.html#a0f3f914e1ac293bcd2b86c529aec61f8">TypPunktu</a>&#160;</td><td class="memItemRight"><a class="el" href="#a34cbba6fd8512cafd7c2a115bdb673a8">typPunktu</a></td></tr>
+<tr class="memdesc:a34cbba6fd8512cafd7c2a115bdb673a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Typ punktu.  <br /></td></tr>
+<tr class="memitem:a4b139396e2689eca6e6c332a5ef64a1c" id="r_a4b139396e2689eca6e6c332a5ef64a1c"><td class="memItemLeft"><a class="el" href="_enum_8cs.html#ab2d56201c4f46a09ecd76b1511652ec9">StanRezerwacji</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4b139396e2689eca6e6c332a5ef64a1c">stanRezerwacji</a></td></tr>
+<tr class="memdesc:a4b139396e2689eca6e6c332a5ef64a1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stan rezerwacji punktu.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
+Właściwości</h2></td></tr>
+<tr class="memitem:a9b24b3399d7bc9248f782178627df021" id="r_a9b24b3399d7bc9248f782178627df021"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a9b24b3399d7bc9248f782178627df021">SzacowanyKoszt</a><code> [get]</code></td></tr>
+<tr class="memdesc:a9b24b3399d7bc9248f782178627df021"><td class="mdescLeft">&#160;</td><td class="mdescRight">Właściwość pobierająca szacowany koszt punktu harmonogramu.  <br /></td></tr>
+<tr class="memitem:acee88f26df5b2570ab770fa12901c86a" id="r_acee88f26df5b2570ab770fa12901c86a"><td class="memItemLeft">DateTime&#160;</td><td class="memItemRight"><a class="el" href="#acee88f26df5b2570ab770fa12901c86a">CzasStart</a><code> [get]</code></td></tr>
+<tr class="memdesc:acee88f26df5b2570ab770fa12901c86a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Czas rozpoczęcia wydarzenia (właściwość publiczna).  <br /></td></tr>
+<tr class="memitem:a4e0ea266eb69c2d2613b00d110e34b08" id="r_a4e0ea266eb69c2d2613b00d110e34b08"><td class="memItemLeft">DateTime&#160;</td><td class="memItemRight"><a class="el" href="#a4e0ea266eb69c2d2613b00d110e34b08">CzasKoniec</a><code> [get]</code></td></tr>
+<tr class="memdesc:a4e0ea266eb69c2d2613b00d110e34b08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Czas zakończenia wydarzenia (właściwość publiczna).  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Abstrakcyjna klasa bazowa reprezentująca pojedynczy punkt w harmonogramie podróży. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a id="a4e4cb3574430476e7f283c0c75e1ec2d" name="a4e4cb3574430476e7f283c0c75e1ec2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e4cb3574430476e7f283c0c75e1ec2d">&#9670;&#160;</a></span>PunktHarmonogramu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PunktHarmonogramu.PunktHarmonogramu </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>nazwa</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DateTime</td>          <td class="paramname"><span class="paramname"><em>czasStart</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DateTime</td>          <td class="paramname"><span class="paramname"><em>czasKoniec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>szacowanyKoszt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_enum_8cs.html#a0f3f914e1ac293bcd2b86c529aec61f8">TypPunktu</a></td>          <td class="paramname"><span class="paramname"><em>typPunktu</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inicjalizuje nową instancję klasy bazowej <a class="el" href="class_punkt_harmonogramu.html" title="Abstrakcyjna klasa bazowa reprezentująca pojedynczy punkt w harmonogramie podróży.">PunktHarmonogramu</a>. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nazwa</td><td>Nazwa punktu. </td></tr>
+    <tr><td class="paramname">czasStart</td><td>Czas rozpoczęcia wydarzenia. </td></tr>
+    <tr><td class="paramname">czasKoniec</td><td>Czas zakończenia wydarzenia. </td></tr>
+    <tr><td class="paramname">szacowanyKoszt</td><td>Przewidywany koszt. </td></tr>
+    <tr><td class="paramname">typPunktu</td><td>Typ przypisany do tego punktu. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Wyjątki</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentException</td><td>Wyrzucany, gdy nazwa jest pusta, czas zakończenia jest przed czasem rozpoczęcia lub koszt jest ujemny. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="a69e6ec2d04e30b1fdd2b7a6cdd5e1fa7" name="a69e6ec2d04e30b1fdd2b7a6cdd5e1fa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69e6ec2d04e30b1fdd2b7a6cdd5e1fa7">&#9670;&#160;</a></span>CompareTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PunktHarmonogramu.CompareTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_punkt_harmonogramu.html">PunktHarmonogramu</a>?</td>          <td class="paramname"><span class="paramname"><em>inny</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Porównuje dwa punkty po czasie ich rozpoczęcia, co umożliwia ich sortowanie. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inny</td><td>Inny punkt do porównania. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Wartość całkowita wskazująca kolejność. </dd></dl>
+
+</div>
+</div>
+<a id="aac8c2e65903f1f71d8dfcd41c964fec4" name="aac8c2e65903f1f71d8dfcd41c964fec4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac8c2e65903f1f71d8dfcd41c964fec4">&#9670;&#160;</a></span>CzyKoliduje()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PunktHarmonogramu.CzyKoliduje </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_punkt_harmonogramu.html">PunktHarmonogramu</a></td>          <td class="paramname"><span class="paramname"><em>innyPunkt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sprawdza, czy ten punkt nakłada się czasowo z innym punktem harmonogramu. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">innyPunkt</td><td>Inny punkt harmonogramu do porównania. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Zwraca true, jeśli punkty się nakładają; w przeciwnym razie false. </dd></dl>
+
+</div>
+</div>
+<a id="a1d7e221953215d9ee3da208dd39ea97d" name="a1d7e221953215d9ee3da208dd39ea97d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d7e221953215d9ee3da208dd39ea97d">&#9670;&#160;</a></span>ObliczCzasTrwania()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TimeSpan PunktHarmonogramu.ObliczCzasTrwania </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Oblicza czas trwania punktu harmonogramu. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>Różnica między czasem zakończenia i rozpoczęcia jako obiekt TimeSpan. </dd></dl>
+
+</div>
+</div>
+<a id="a8f6923afd3daeb0a8bda55ced9059e8c" name="a8f6923afd3daeb0a8bda55ced9059e8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f6923afd3daeb0a8bda55ced9059e8c">&#9670;&#160;</a></span>PokazSzczegoly()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PunktHarmonogramu.PokazSzczegoly </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel abstract">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Abstrakcyjna metoda do wyświetlania szczegółów punktu harmonogramu w konsoli. </p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a id="a2fc2eeebbb5a370fe9f29e1786cf4ea3" name="a2fc2eeebbb5a370fe9f29e1786cf4ea3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fc2eeebbb5a370fe9f29e1786cf4ea3">&#9670;&#160;</a></span>czasKoniec</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DateTime PunktHarmonogramu.czasKoniec</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Czas zakończenia. </p>
+
+</div>
+</div>
+<a id="a7f85784f0e94f4cf67abed47d38a72d3" name="a7f85784f0e94f4cf67abed47d38a72d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f85784f0e94f4cf67abed47d38a72d3">&#9670;&#160;</a></span>czasStart</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DateTime PunktHarmonogramu.czasStart</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Czas rozpoczęcia. </p>
+
+</div>
+</div>
+<a id="acd67e21afdd38fbba7fe5bf24df41ec1" name="acd67e21afdd38fbba7fe5bf24df41ec1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd67e21afdd38fbba7fe5bf24df41ec1">&#9670;&#160;</a></span>nazwa</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string PunktHarmonogramu.nazwa</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Nazwa punktu harmonogramu. </p>
+
+</div>
+</div>
+<a id="a4b139396e2689eca6e6c332a5ef64a1c" name="a4b139396e2689eca6e6c332a5ef64a1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b139396e2689eca6e6c332a5ef64a1c">&#9670;&#160;</a></span>stanRezerwacji</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_enum_8cs.html#ab2d56201c4f46a09ecd76b1511652ec9">StanRezerwacji</a> PunktHarmonogramu.stanRezerwacji</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stan rezerwacji punktu. </p>
+
+</div>
+</div>
+<a id="afbe242160cdc70cda8844ae7c080aeb1" name="afbe242160cdc70cda8844ae7c080aeb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbe242160cdc70cda8844ae7c080aeb1">&#9670;&#160;</a></span>szacowanyKoszt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PunktHarmonogramu.szacowanyKoszt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Przewidywany koszt. </p>
+
+</div>
+</div>
+<a id="a34cbba6fd8512cafd7c2a115bdb673a8" name="a34cbba6fd8512cafd7c2a115bdb673a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34cbba6fd8512cafd7c2a115bdb673a8">&#9670;&#160;</a></span>typPunktu</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_enum_8cs.html#a0f3f914e1ac293bcd2b86c529aec61f8">TypPunktu</a> PunktHarmonogramu.typPunktu</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Typ punktu. </p>
+
+</div>
+</div>
+<a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">Dokumentacja właściwości</h2>
+<a id="a4e0ea266eb69c2d2613b00d110e34b08" name="a4e0ea266eb69c2d2613b00d110e34b08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e0ea266eb69c2d2613b00d110e34b08">&#9670;&#160;</a></span>CzasKoniec</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DateTime PunktHarmonogramu.CzasKoniec</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Czas zakończenia wydarzenia (właściwość publiczna). </p>
+
+</div>
+</div>
+<a id="acee88f26df5b2570ab770fa12901c86a" name="acee88f26df5b2570ab770fa12901c86a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acee88f26df5b2570ab770fa12901c86a">&#9670;&#160;</a></span>CzasStart</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DateTime PunktHarmonogramu.CzasStart</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Czas rozpoczęcia wydarzenia (właściwość publiczna). </p>
+
+</div>
+</div>
+<a id="a9b24b3399d7bc9248f782178627df021" name="a9b24b3399d7bc9248f782178627df021"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b24b3399d7bc9248f782178627df021">&#9670;&#160;</a></span>SzacowanyKoszt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PunktHarmonogramu.SzacowanyKoszt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Właściwość pobierająca szacowany koszt punktu harmonogramu. </p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z pliku:<ul>
+<li>ProjektPO/<a class="el" href="_punkt_harmonogramu_8cs.html">PunktHarmonogramu.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_punkt_harmonogramu.html">PunktHarmonogramu</a></li>
+    <li class="footer">Wygenerowano za pomocą <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

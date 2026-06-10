@@ -1,0 +1,507 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Plan wyjazdu: Dokumentacja klasy PlanPodrozy</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Plan wyjazdu
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano za pomocą Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_plan_podrozy.html','','class_plan_podrozy-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Dokumentacja klasy PlanPodrozy</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Główna klasa zarządzająca planem podróży, uczestnikami i budżetem.  
+ <a href="#details">Więcej...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a687b98fc75968ca0dd8c33fa3b01fb7e" id="r_a687b98fc75968ca0dd8c33fa3b01fb7e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a687b98fc75968ca0dd8c33fa3b01fb7e">PlanPodrozy</a> (string tytulPodrozy, DateTime dataRozpoczecia, DateTime dataZakonczenia, double budzetCalkowity)</td></tr>
+<tr class="memdesc:a687b98fc75968ca0dd8c33fa3b01fb7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicjalizuje nowy plan podróży.  <br /></td></tr>
+<tr class="memitem:ac66676767375b938917e981baae5abb1" id="r_ac66676767375b938917e981baae5abb1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac66676767375b938917e981baae5abb1">DodajPunkt</a> (<a class="el" href="class_punkt_harmonogramu.html">PunktHarmonogramu</a> punkt)</td></tr>
+<tr class="memdesc:ac66676767375b938917e981baae5abb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dodaje nowy punkt do harmonogramu podróży.  <br /></td></tr>
+<tr class="memitem:af7385f96a274fa9e7f7b36f1ff00df38" id="r_af7385f96a274fa9e7f7b36f1ff00df38"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af7385f96a274fa9e7f7b36f1ff00df38">UsunPunkt</a> (int id)</td></tr>
+<tr class="memdesc:af7385f96a274fa9e7f7b36f1ff00df38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Usuwa punkt z harmonogramu na podstawie jego indeksu.  <br /></td></tr>
+<tr class="memitem:a97129cb9180b3d77eb10667e9ffda40f" id="r_a97129cb9180b3d77eb10667e9ffda40f"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a97129cb9180b3d77eb10667e9ffda40f">ObliczKosztCalkowity</a> ()</td></tr>
+<tr class="memdesc:a97129cb9180b3d77eb10667e9ffda40f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oblicza sumaryczny koszt wszystkich zaplanowanych punktów harmonogramu.  <br /></td></tr>
+<tr class="memitem:a8ab0368a55700af4e26df27fd2d3b6ce" id="r_a8ab0368a55700af4e26df27fd2d3b6ce"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8ab0368a55700af4e26df27fd2d3b6ce">GenerujPodsumowanie</a> ()</td></tr>
+<tr class="memdesc:a8ab0368a55700af4e26df27fd2d3b6ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generuje i wyświetla podsumowanie planu podróży na konsoli.  <br /></td></tr>
+<tr class="memitem:a06fb9a6f2237b8e4be848c0446472cdf" id="r_a06fb9a6f2237b8e4be848c0446472cdf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a06fb9a6f2237b8e4be848c0446472cdf">DodajUczestnika</a> (<a class="el" href="class_uczestnik.html">Uczestnik</a> uczestnik)</td></tr>
+<tr class="memdesc:a06fb9a6f2237b8e4be848c0446472cdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dodaje nowego uczestnika wycieczki do planu.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:a8a5888e423208e8180fb4d0c1eda8ca1" id="r_a8a5888e423208e8180fb4d0c1eda8ca1"><td class="memItemLeft">string&#160;</td><td class="memItemRight"><a class="el" href="#a8a5888e423208e8180fb4d0c1eda8ca1">tytulPodrozy</a></td></tr>
+<tr class="memdesc:a8a5888e423208e8180fb4d0c1eda8ca1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tytuł wyjazdu.  <br /></td></tr>
+<tr class="memitem:ae3174a17deb6cae7d4c3dfd42d925e87" id="r_ae3174a17deb6cae7d4c3dfd42d925e87"><td class="memItemLeft">DateTime&#160;</td><td class="memItemRight"><a class="el" href="#ae3174a17deb6cae7d4c3dfd42d925e87">dataRozpoczecia</a></td></tr>
+<tr class="memdesc:ae3174a17deb6cae7d4c3dfd42d925e87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data startu podróży.  <br /></td></tr>
+<tr class="memitem:a6da2482b8fecccefeac8c4d4c168611c" id="r_a6da2482b8fecccefeac8c4d4c168611c"><td class="memItemLeft">DateTime&#160;</td><td class="memItemRight"><a class="el" href="#a6da2482b8fecccefeac8c4d4c168611c">dataZakonczenia</a></td></tr>
+<tr class="memdesc:a6da2482b8fecccefeac8c4d4c168611c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data zakończenia podróży.  <br /></td></tr>
+<tr class="memitem:a938b74bf5aaf03c7a798afa4699429f1" id="r_a938b74bf5aaf03c7a798afa4699429f1"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a938b74bf5aaf03c7a798afa4699429f1">budzetCalkowity</a></td></tr>
+<tr class="memdesc:a938b74bf5aaf03c7a798afa4699429f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maksymalny zaplanowany budżet.  <br /></td></tr>
+<tr class="memitem:a3812fd43eba28cc8187d71d51959d6af" id="r_a3812fd43eba28cc8187d71d51959d6af"><td class="memItemLeft">List&lt; <a class="el" href="class_punkt_harmonogramu.html">PunktHarmonogramu</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a3812fd43eba28cc8187d71d51959d6af">listaPunktow</a></td></tr>
+<tr class="memdesc:a3812fd43eba28cc8187d71d51959d6af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista zadeklarowanych punktów harmonogramu.  <br /></td></tr>
+<tr class="memitem:a41ea3173abe2cee81598d50ecf479caa" id="r_a41ea3173abe2cee81598d50ecf479caa"><td class="memItemLeft">List&lt; <a class="el" href="class_uczestnik.html">Uczestnik</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a41ea3173abe2cee81598d50ecf479caa">listaUczestnikow</a></td></tr>
+<tr class="memdesc:a41ea3173abe2cee81598d50ecf479caa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista uczestników biorących udział w wyjeździe.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Główna klasa zarządzająca planem podróży, uczestnikami i budżetem. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a id="a687b98fc75968ca0dd8c33fa3b01fb7e" name="a687b98fc75968ca0dd8c33fa3b01fb7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a687b98fc75968ca0dd8c33fa3b01fb7e">&#9670;&#160;</a></span>PlanPodrozy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PlanPodrozy.PlanPodrozy </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>tytulPodrozy</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DateTime</td>          <td class="paramname"><span class="paramname"><em>dataRozpoczecia</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DateTime</td>          <td class="paramname"><span class="paramname"><em>dataZakonczenia</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>budzetCalkowity</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicjalizuje nowy plan podróży. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tytulPodrozy</td><td>Tytuł wyjazdu. </td></tr>
+    <tr><td class="paramname">dataRozpoczecia</td><td>Data startu podróży. </td></tr>
+    <tr><td class="paramname">dataZakonczenia</td><td>Data zakończenia podróży. </td></tr>
+    <tr><td class="paramname">budzetCalkowity</td><td>Maksymalny zaplanowany budżet. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Wyjątki</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentException</td><td>Rzucany, gdy tytuł jest pusty, daty są nielogiczne lub budżet jest ujemny. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="ac66676767375b938917e981baae5abb1" name="ac66676767375b938917e981baae5abb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac66676767375b938917e981baae5abb1">&#9670;&#160;</a></span>DodajPunkt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlanPodrozy.DodajPunkt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_punkt_harmonogramu.html">PunktHarmonogramu</a></td>          <td class="paramname"><span class="paramname"><em>punkt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dodaje nowy punkt do harmonogramu podróży. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">punkt</td><td>Punkt harmonogramu do dodania. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Wyjątki</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentNullException</td><td>Rzucany, gdy przekazany punkt jest nullem. </td></tr>
+    <tr><td class="paramname">ArgumentException</td><td>Rzucany, gdy punkt wykracza poza ramy wyjazdu. </td></tr>
+    <tr><td class="paramname">KolizjaTerminowException</td><td>Rzucany, gdy punkt nakłada się czasowo z innym wydarzeniem. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a06fb9a6f2237b8e4be848c0446472cdf" name="a06fb9a6f2237b8e4be848c0446472cdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06fb9a6f2237b8e4be848c0446472cdf">&#9670;&#160;</a></span>DodajUczestnika()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlanPodrozy.DodajUczestnika </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_uczestnik.html">Uczestnik</a></td>          <td class="paramname"><span class="paramname"><em>uczestnik</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dodaje nowego uczestnika wycieczki do planu. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uczestnik</td><td>Obiekt uczestnika do dodania. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Wyjątki</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentNullException</td><td>Rzucany, gdy przekazany uczestnik jest nullem. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8ab0368a55700af4e26df27fd2d3b6ce" name="a8ab0368a55700af4e26df27fd2d3b6ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ab0368a55700af4e26df27fd2d3b6ce">&#9670;&#160;</a></span>GenerujPodsumowanie()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlanPodrozy.GenerujPodsumowanie </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generuje i wyświetla podsumowanie planu podróży na konsoli. </p>
+
+</div>
+</div>
+<a id="a97129cb9180b3d77eb10667e9ffda40f" name="a97129cb9180b3d77eb10667e9ffda40f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97129cb9180b3d77eb10667e9ffda40f">&#9670;&#160;</a></span>ObliczKosztCalkowity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PlanPodrozy.ObliczKosztCalkowity </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Oblicza sumaryczny koszt wszystkich zaplanowanych punktów harmonogramu. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>Całkowity dotychczasowy koszt. </dd></dl>
+
+</div>
+</div>
+<a id="af7385f96a274fa9e7f7b36f1ff00df38" name="af7385f96a274fa9e7f7b36f1ff00df38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7385f96a274fa9e7f7b36f1ff00df38">&#9670;&#160;</a></span>UsunPunkt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlanPodrozy.UsunPunkt </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Usuwa punkt z harmonogramu na podstawie jego indeksu. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Identyfikator (indeks) punktu do usunięcia. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Wyjątki</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentOutOfRangeException</td><td>Rzucany, gdy indeks jest poza zakresem listy. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a id="a938b74bf5aaf03c7a798afa4699429f1" name="a938b74bf5aaf03c7a798afa4699429f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a938b74bf5aaf03c7a798afa4699429f1">&#9670;&#160;</a></span>budzetCalkowity</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PlanPodrozy.budzetCalkowity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Maksymalny zaplanowany budżet. </p>
+
+</div>
+</div>
+<a id="ae3174a17deb6cae7d4c3dfd42d925e87" name="ae3174a17deb6cae7d4c3dfd42d925e87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3174a17deb6cae7d4c3dfd42d925e87">&#9670;&#160;</a></span>dataRozpoczecia</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DateTime PlanPodrozy.dataRozpoczecia</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Data startu podróży. </p>
+
+</div>
+</div>
+<a id="a6da2482b8fecccefeac8c4d4c168611c" name="a6da2482b8fecccefeac8c4d4c168611c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6da2482b8fecccefeac8c4d4c168611c">&#9670;&#160;</a></span>dataZakonczenia</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DateTime PlanPodrozy.dataZakonczenia</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Data zakończenia podróży. </p>
+
+</div>
+</div>
+<a id="a3812fd43eba28cc8187d71d51959d6af" name="a3812fd43eba28cc8187d71d51959d6af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3812fd43eba28cc8187d71d51959d6af">&#9670;&#160;</a></span>listaPunktow</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_punkt_harmonogramu.html">PunktHarmonogramu</a>&gt; PlanPodrozy.listaPunktow</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lista zadeklarowanych punktów harmonogramu. </p>
+
+</div>
+</div>
+<a id="a41ea3173abe2cee81598d50ecf479caa" name="a41ea3173abe2cee81598d50ecf479caa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41ea3173abe2cee81598d50ecf479caa">&#9670;&#160;</a></span>listaUczestnikow</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_uczestnik.html">Uczestnik</a>&gt; PlanPodrozy.listaUczestnikow</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lista uczestników biorących udział w wyjeździe. </p>
+
+</div>
+</div>
+<a id="a8a5888e423208e8180fb4d0c1eda8ca1" name="a8a5888e423208e8180fb4d0c1eda8ca1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a5888e423208e8180fb4d0c1eda8ca1">&#9670;&#160;</a></span>tytulPodrozy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string PlanPodrozy.tytulPodrozy</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tytuł wyjazdu. </p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z pliku:<ul>
+<li>ProjektPO/<a class="el" href="_plan_podrozy_8cs.html">PlanPodrozy.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_plan_podrozy.html">PlanPodrozy</a></li>
+    <li class="footer">Wygenerowano za pomocą <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

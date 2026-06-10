@@ -1,0 +1,258 @@
+\doxysection{Dokumentacja klasy Punkt\+Harmonogramu}
+\hypertarget{class_punkt_harmonogramu}{}\label{class_punkt_harmonogramu}\index{PunktHarmonogramu@{PunktHarmonogramu}}
+
+
+Abstrakcyjna klasa bazowa reprezentująca pojedynczy punkt w harmonogramie podróży.  
+
+
+Diagram dziedziczenia dla Punkt\+Harmonogramu\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_punkt_harmonogramu}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+Time\+Span \doxymbox{\hyperlink{class_punkt_harmonogramu_a1d7e221953215d9ee3da208dd39ea97d}{Oblicz\+Czas\+Trwania}} ()
+\begin{DoxyCompactList}\small\item\em Oblicza czas trwania punktu harmonogramu. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_punkt_harmonogramu_aac8c2e65903f1f71d8dfcd41c964fec4}{Czy\+Koliduje}} (\doxymbox{\hyperlink{class_punkt_harmonogramu}{Punkt\+Harmonogramu}} inny\+Punkt)
+\begin{DoxyCompactList}\small\item\em Sprawdza, czy ten punkt nakłada się czasowo z innym punktem harmonogramu. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_punkt_harmonogramu_a8f6923afd3daeb0a8bda55ced9059e8c}{Pokaz\+Szczegoly}} ()
+\begin{DoxyCompactList}\small\item\em Abstrakcyjna metoda do wyświetlania szczegółów punktu harmonogramu w konsoli. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_punkt_harmonogramu_a69e6ec2d04e30b1fdd2b7a6cdd5e1fa7}{Compare\+To}} (\doxymbox{\hyperlink{class_punkt_harmonogramu}{Punkt\+Harmonogramu}}? inny)
+\begin{DoxyCompactList}\small\item\em Porównuje dwa punkty po czasie ich rozpoczęcia, co umożliwia ich sortowanie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody chronione}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_punkt_harmonogramu_a4e4cb3574430476e7f283c0c75e1ec2d}{Punkt\+Harmonogramu}} (string nazwa, Date\+Time czas\+Start, Date\+Time czas\+Koniec, double szacowany\+Koszt, \doxymbox{\hyperlink{_enum_8cs_a0f3f914e1ac293bcd2b86c529aec61f8}{Typ\+Punktu}} typ\+Punktu)
+\begin{DoxyCompactList}\small\item\em Inicjalizuje nową instancję klasy bazowej \doxylink{class_punkt_harmonogramu}{Punkt\+Harmonogramu}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty chronione}
+\begin{DoxyCompactItemize}
+\item 
+string \doxymbox{\hyperlink{class_punkt_harmonogramu_acd67e21afdd38fbba7fe5bf24df41ec1}{nazwa}}
+\begin{DoxyCompactList}\small\item\em Nazwa punktu harmonogramu. \end{DoxyCompactList}\item 
+Date\+Time \doxymbox{\hyperlink{class_punkt_harmonogramu_a7f85784f0e94f4cf67abed47d38a72d3}{czas\+Start}}
+\begin{DoxyCompactList}\small\item\em Czas rozpoczęcia. \end{DoxyCompactList}\item 
+Date\+Time \doxymbox{\hyperlink{class_punkt_harmonogramu_a2fc2eeebbb5a370fe9f29e1786cf4ea3}{czas\+Koniec}}
+\begin{DoxyCompactList}\small\item\em Czas zakończenia. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_punkt_harmonogramu_afbe242160cdc70cda8844ae7c080aeb1}{szacowany\+Koszt}}
+\begin{DoxyCompactList}\small\item\em Przewidywany koszt. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{_enum_8cs_a0f3f914e1ac293bcd2b86c529aec61f8}{Typ\+Punktu}} \doxymbox{\hyperlink{class_punkt_harmonogramu_a34cbba6fd8512cafd7c2a115bdb673a8}{typ\+Punktu}}
+\begin{DoxyCompactList}\small\item\em Typ punktu. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{_enum_8cs_ab2d56201c4f46a09ecd76b1511652ec9}{Stan\+Rezerwacji}} \doxymbox{\hyperlink{class_punkt_harmonogramu_a4b139396e2689eca6e6c332a5ef64a1c}{stan\+Rezerwacji}}
+\begin{DoxyCompactList}\small\item\em Stan rezerwacji punktu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Właściwości}
+\begin{DoxyCompactItemize}
+\item 
+double \doxymbox{\hyperlink{class_punkt_harmonogramu_a9b24b3399d7bc9248f782178627df021}{Szacowany\+Koszt}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Właściwość pobierająca szacowany koszt punktu harmonogramu. \end{DoxyCompactList}\item 
+Date\+Time \doxymbox{\hyperlink{class_punkt_harmonogramu_acee88f26df5b2570ab770fa12901c86a}{Czas\+Start}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Czas rozpoczęcia wydarzenia (właściwość publiczna). \end{DoxyCompactList}\item 
+Date\+Time \doxymbox{\hyperlink{class_punkt_harmonogramu_a4e0ea266eb69c2d2613b00d110e34b08}{Czas\+Koniec}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Czas zakończenia wydarzenia (właściwość publiczna). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Abstrakcyjna klasa bazowa reprezentująca pojedynczy punkt w harmonogramie podróży. 
+
+\label{class_punkt_harmonogramu_doc-constructors}
+\Hypertarget{class_punkt_harmonogramu_doc-constructors}
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_punkt_harmonogramu_a4e4cb3574430476e7f283c0c75e1ec2d}\index{PunktHarmonogramu@{PunktHarmonogramu}!PunktHarmonogramu@{PunktHarmonogramu}}
+\index{PunktHarmonogramu@{PunktHarmonogramu}!PunktHarmonogramu@{PunktHarmonogramu}}
+\doxysubsubsection{\texorpdfstring{PunktHarmonogramu()}{PunktHarmonogramu()}}
+{\footnotesize\ttfamily \label{class_punkt_harmonogramu_a4e4cb3574430476e7f283c0c75e1ec2d} 
+Punkt\+Harmonogramu.\+Punkt\+Harmonogramu (\begin{DoxyParamCaption}\item[{string}]{nazwa}{, }\item[{Date\+Time}]{czas\+Start}{, }\item[{Date\+Time}]{czas\+Koniec}{, }\item[{double}]{szacowany\+Koszt}{, }\item[{\doxymbox{\hyperlink{_enum_8cs_a0f3f914e1ac293bcd2b86c529aec61f8}{Typ\+Punktu}}}]{typ\+Punktu}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Inicjalizuje nową instancję klasy bazowej \doxylink{class_punkt_harmonogramu}{Punkt\+Harmonogramu}. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em nazwa} & Nazwa punktu. \\
+\hline
+{\em czas\+Start} & Czas rozpoczęcia wydarzenia. \\
+\hline
+{\em czas\+Koniec} & Czas zakończenia wydarzenia. \\
+\hline
+{\em szacowany\+Koszt} & Przewidywany koszt. \\
+\hline
+{\em typ\+Punktu} & Typ przypisany do tego punktu. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Wyjątki}
+{\em Argument\+Exception} & Wyrzucany, gdy nazwa jest pusta, czas zakończenia jest przed czasem rozpoczęcia lub koszt jest ujemny. \\
+\hline
+\end{DoxyExceptions}
+
+
+\label{class_punkt_harmonogramu_doc-func-members}
+\Hypertarget{class_punkt_harmonogramu_doc-func-members}
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_punkt_harmonogramu_a69e6ec2d04e30b1fdd2b7a6cdd5e1fa7}\index{PunktHarmonogramu@{PunktHarmonogramu}!CompareTo@{CompareTo}}
+\index{CompareTo@{CompareTo}!PunktHarmonogramu@{PunktHarmonogramu}}
+\doxysubsubsection{\texorpdfstring{CompareTo()}{CompareTo()}}
+{\footnotesize\ttfamily \label{class_punkt_harmonogramu_a69e6ec2d04e30b1fdd2b7a6cdd5e1fa7} 
+int Punkt\+Harmonogramu.\+Compare\+To (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_punkt_harmonogramu}{Punkt\+Harmonogramu}}?}]{inny}{}\end{DoxyParamCaption})}
+
+
+
+Porównuje dwa punkty po czasie ich rozpoczęcia, co umożliwia ich sortowanie. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em inny} & Inny punkt do porównania. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Wartość całkowita wskazująca kolejność. 
+\end{DoxyReturn}
+\Hypertarget{class_punkt_harmonogramu_aac8c2e65903f1f71d8dfcd41c964fec4}\index{PunktHarmonogramu@{PunktHarmonogramu}!CzyKoliduje@{CzyKoliduje}}
+\index{CzyKoliduje@{CzyKoliduje}!PunktHarmonogramu@{PunktHarmonogramu}}
+\doxysubsubsection{\texorpdfstring{CzyKoliduje()}{CzyKoliduje()}}
+{\footnotesize\ttfamily \label{class_punkt_harmonogramu_aac8c2e65903f1f71d8dfcd41c964fec4} 
+bool Punkt\+Harmonogramu.\+Czy\+Koliduje (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_punkt_harmonogramu}{Punkt\+Harmonogramu}}}]{inny\+Punkt}{}\end{DoxyParamCaption})}
+
+
+
+Sprawdza, czy ten punkt nakłada się czasowo z innym punktem harmonogramu. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em inny\+Punkt} & Inny punkt harmonogramu do porównania. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Zwraca true, jeśli punkty się nakładają; w przeciwnym razie false. 
+\end{DoxyReturn}
+\Hypertarget{class_punkt_harmonogramu_a1d7e221953215d9ee3da208dd39ea97d}\index{PunktHarmonogramu@{PunktHarmonogramu}!ObliczCzasTrwania@{ObliczCzasTrwania}}
+\index{ObliczCzasTrwania@{ObliczCzasTrwania}!PunktHarmonogramu@{PunktHarmonogramu}}
+\doxysubsubsection{\texorpdfstring{ObliczCzasTrwania()}{ObliczCzasTrwania()}}
+{\footnotesize\ttfamily \label{class_punkt_harmonogramu_a1d7e221953215d9ee3da208dd39ea97d} 
+Time\+Span Punkt\+Harmonogramu.\+Oblicz\+Czas\+Trwania (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Oblicza czas trwania punktu harmonogramu. 
+
+\begin{DoxyReturn}{Zwraca}
+Różnica między czasem zakończenia i rozpoczęcia jako obiekt Time\+Span. 
+\end{DoxyReturn}
+\Hypertarget{class_punkt_harmonogramu_a8f6923afd3daeb0a8bda55ced9059e8c}\index{PunktHarmonogramu@{PunktHarmonogramu}!PokazSzczegoly@{PokazSzczegoly}}
+\index{PokazSzczegoly@{PokazSzczegoly}!PunktHarmonogramu@{PunktHarmonogramu}}
+\doxysubsubsection{\texorpdfstring{PokazSzczegoly()}{PokazSzczegoly()}}
+{\footnotesize\ttfamily \label{class_punkt_harmonogramu_a8f6923afd3daeb0a8bda55ced9059e8c} 
+void Punkt\+Harmonogramu.\+Pokaz\+Szczegoly (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Abstrakcyjna metoda do wyświetlania szczegółów punktu harmonogramu w konsoli. 
+
+
+
+\label{class_punkt_harmonogramu_doc-variable-members}
+\Hypertarget{class_punkt_harmonogramu_doc-variable-members}
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_punkt_harmonogramu_a2fc2eeebbb5a370fe9f29e1786cf4ea3}\index{PunktHarmonogramu@{PunktHarmonogramu}!czasKoniec@{czasKoniec}}
+\index{czasKoniec@{czasKoniec}!PunktHarmonogramu@{PunktHarmonogramu}}
+\doxysubsubsection{\texorpdfstring{czasKoniec}{czasKoniec}}
+{\footnotesize\ttfamily \label{class_punkt_harmonogramu_a2fc2eeebbb5a370fe9f29e1786cf4ea3} 
+Date\+Time Punkt\+Harmonogramu.\+czas\+Koniec\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Czas zakończenia. 
+
+\Hypertarget{class_punkt_harmonogramu_a7f85784f0e94f4cf67abed47d38a72d3}\index{PunktHarmonogramu@{PunktHarmonogramu}!czasStart@{czasStart}}
+\index{czasStart@{czasStart}!PunktHarmonogramu@{PunktHarmonogramu}}
+\doxysubsubsection{\texorpdfstring{czasStart}{czasStart}}
+{\footnotesize\ttfamily \label{class_punkt_harmonogramu_a7f85784f0e94f4cf67abed47d38a72d3} 
+Date\+Time Punkt\+Harmonogramu.\+czas\+Start\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Czas rozpoczęcia. 
+
+\Hypertarget{class_punkt_harmonogramu_acd67e21afdd38fbba7fe5bf24df41ec1}\index{PunktHarmonogramu@{PunktHarmonogramu}!nazwa@{nazwa}}
+\index{nazwa@{nazwa}!PunktHarmonogramu@{PunktHarmonogramu}}
+\doxysubsubsection{\texorpdfstring{nazwa}{nazwa}}
+{\footnotesize\ttfamily \label{class_punkt_harmonogramu_acd67e21afdd38fbba7fe5bf24df41ec1} 
+string Punkt\+Harmonogramu.\+nazwa\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Nazwa punktu harmonogramu. 
+
+\Hypertarget{class_punkt_harmonogramu_a4b139396e2689eca6e6c332a5ef64a1c}\index{PunktHarmonogramu@{PunktHarmonogramu}!stanRezerwacji@{stanRezerwacji}}
+\index{stanRezerwacji@{stanRezerwacji}!PunktHarmonogramu@{PunktHarmonogramu}}
+\doxysubsubsection{\texorpdfstring{stanRezerwacji}{stanRezerwacji}}
+{\footnotesize\ttfamily \label{class_punkt_harmonogramu_a4b139396e2689eca6e6c332a5ef64a1c} 
+\doxymbox{\hyperlink{_enum_8cs_ab2d56201c4f46a09ecd76b1511652ec9}{Stan\+Rezerwacji}} Punkt\+Harmonogramu.\+stan\+Rezerwacji\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Stan rezerwacji punktu. 
+
+\Hypertarget{class_punkt_harmonogramu_afbe242160cdc70cda8844ae7c080aeb1}\index{PunktHarmonogramu@{PunktHarmonogramu}!szacowanyKoszt@{szacowanyKoszt}}
+\index{szacowanyKoszt@{szacowanyKoszt}!PunktHarmonogramu@{PunktHarmonogramu}}
+\doxysubsubsection{\texorpdfstring{szacowanyKoszt}{szacowanyKoszt}}
+{\footnotesize\ttfamily \label{class_punkt_harmonogramu_afbe242160cdc70cda8844ae7c080aeb1} 
+double Punkt\+Harmonogramu.\+szacowany\+Koszt\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Przewidywany koszt. 
+
+\Hypertarget{class_punkt_harmonogramu_a34cbba6fd8512cafd7c2a115bdb673a8}\index{PunktHarmonogramu@{PunktHarmonogramu}!typPunktu@{typPunktu}}
+\index{typPunktu@{typPunktu}!PunktHarmonogramu@{PunktHarmonogramu}}
+\doxysubsubsection{\texorpdfstring{typPunktu}{typPunktu}}
+{\footnotesize\ttfamily \label{class_punkt_harmonogramu_a34cbba6fd8512cafd7c2a115bdb673a8} 
+\doxymbox{\hyperlink{_enum_8cs_a0f3f914e1ac293bcd2b86c529aec61f8}{Typ\+Punktu}} Punkt\+Harmonogramu.\+typ\+Punktu\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Typ punktu. 
+
+
+
+\label{class_punkt_harmonogramu_doc-property-members}
+\Hypertarget{class_punkt_harmonogramu_doc-property-members}
+\doxysubsection{Dokumentacja właściwości}
+\Hypertarget{class_punkt_harmonogramu_a4e0ea266eb69c2d2613b00d110e34b08}\index{PunktHarmonogramu@{PunktHarmonogramu}!CzasKoniec@{CzasKoniec}}
+\index{CzasKoniec@{CzasKoniec}!PunktHarmonogramu@{PunktHarmonogramu}}
+\doxysubsubsection{\texorpdfstring{CzasKoniec}{CzasKoniec}}
+{\footnotesize\ttfamily \label{class_punkt_harmonogramu_a4e0ea266eb69c2d2613b00d110e34b08} 
+Date\+Time Punkt\+Harmonogramu.\+Czas\+Koniec\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Czas zakończenia wydarzenia (właściwość publiczna). 
+
+\Hypertarget{class_punkt_harmonogramu_acee88f26df5b2570ab770fa12901c86a}\index{PunktHarmonogramu@{PunktHarmonogramu}!CzasStart@{CzasStart}}
+\index{CzasStart@{CzasStart}!PunktHarmonogramu@{PunktHarmonogramu}}
+\doxysubsubsection{\texorpdfstring{CzasStart}{CzasStart}}
+{\footnotesize\ttfamily \label{class_punkt_harmonogramu_acee88f26df5b2570ab770fa12901c86a} 
+Date\+Time Punkt\+Harmonogramu.\+Czas\+Start\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Czas rozpoczęcia wydarzenia (właściwość publiczna). 
+
+\Hypertarget{class_punkt_harmonogramu_a9b24b3399d7bc9248f782178627df021}\index{PunktHarmonogramu@{PunktHarmonogramu}!SzacowanyKoszt@{SzacowanyKoszt}}
+\index{SzacowanyKoszt@{SzacowanyKoszt}!PunktHarmonogramu@{PunktHarmonogramu}}
+\doxysubsubsection{\texorpdfstring{SzacowanyKoszt}{SzacowanyKoszt}}
+{\footnotesize\ttfamily \label{class_punkt_harmonogramu_a9b24b3399d7bc9248f782178627df021} 
+double Punkt\+Harmonogramu.\+Szacowany\+Koszt\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Właściwość pobierająca szacowany koszt punktu harmonogramu. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku:\+\begin{DoxyCompactItemize}
+\item 
+Projekt\+PO/\+\doxymbox{\hyperlink{_punkt_harmonogramu_8cs}{Punkt\+Harmonogramu.\+cs}}\end{DoxyCompactItemize}

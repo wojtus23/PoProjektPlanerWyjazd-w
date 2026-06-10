@@ -1,0 +1,233 @@
+\doxysection{Dokumentacja klasy Plan\+Podrozy}
+\hypertarget{class_plan_podrozy}{}\label{class_plan_podrozy}\index{PlanPodrozy@{PlanPodrozy}}
+
+
+Główna klasa zarządzająca planem podróży, uczestnikami i budżetem.  
+
+
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_plan_podrozy_a687b98fc75968ca0dd8c33fa3b01fb7e}{Plan\+Podrozy}} (string tytul\+Podrozy, Date\+Time data\+Rozpoczecia, Date\+Time data\+Zakonczenia, double budzet\+Calkowity)
+\begin{DoxyCompactList}\small\item\em Inicjalizuje nowy plan podróży. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_plan_podrozy_ac66676767375b938917e981baae5abb1}{Dodaj\+Punkt}} (\doxymbox{\hyperlink{class_punkt_harmonogramu}{Punkt\+Harmonogramu}} punkt)
+\begin{DoxyCompactList}\small\item\em Dodaje nowy punkt do harmonogramu podróży. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_plan_podrozy_af7385f96a274fa9e7f7b36f1ff00df38}{Usun\+Punkt}} (int id)
+\begin{DoxyCompactList}\small\item\em Usuwa punkt z harmonogramu na podstawie jego indeksu. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_plan_podrozy_a97129cb9180b3d77eb10667e9ffda40f}{Oblicz\+Koszt\+Calkowity}} ()
+\begin{DoxyCompactList}\small\item\em Oblicza sumaryczny koszt wszystkich zaplanowanych punktów harmonogramu. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_plan_podrozy_a8ab0368a55700af4e26df27fd2d3b6ce}{Generuj\+Podsumowanie}} ()
+\begin{DoxyCompactList}\small\item\em Generuje i wyświetla podsumowanie planu podróży na konsoli. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_plan_podrozy_a06fb9a6f2237b8e4be848c0446472cdf}{Dodaj\+Uczestnika}} (\doxymbox{\hyperlink{class_uczestnik}{Uczestnik}} uczestnik)
+\begin{DoxyCompactList}\small\item\em Dodaje nowego uczestnika wycieczki do planu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+string \doxymbox{\hyperlink{class_plan_podrozy_a8a5888e423208e8180fb4d0c1eda8ca1}{tytul\+Podrozy}}
+\begin{DoxyCompactList}\small\item\em Tytuł wyjazdu. \end{DoxyCompactList}\item 
+Date\+Time \doxymbox{\hyperlink{class_plan_podrozy_ae3174a17deb6cae7d4c3dfd42d925e87}{data\+Rozpoczecia}}
+\begin{DoxyCompactList}\small\item\em Data startu podróży. \end{DoxyCompactList}\item 
+Date\+Time \doxymbox{\hyperlink{class_plan_podrozy_a6da2482b8fecccefeac8c4d4c168611c}{data\+Zakonczenia}}
+\begin{DoxyCompactList}\small\item\em Data zakończenia podróży. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_plan_podrozy_a938b74bf5aaf03c7a798afa4699429f1}{budzet\+Calkowity}}
+\begin{DoxyCompactList}\small\item\em Maksymalny zaplanowany budżet. \end{DoxyCompactList}\item 
+List$<$ \doxymbox{\hyperlink{class_punkt_harmonogramu}{Punkt\+Harmonogramu}} $>$ \doxymbox{\hyperlink{class_plan_podrozy_a3812fd43eba28cc8187d71d51959d6af}{lista\+Punktow}}
+\begin{DoxyCompactList}\small\item\em Lista zadeklarowanych punktów harmonogramu. \end{DoxyCompactList}\item 
+List$<$ \doxymbox{\hyperlink{class_uczestnik}{Uczestnik}} $>$ \doxymbox{\hyperlink{class_plan_podrozy_a41ea3173abe2cee81598d50ecf479caa}{lista\+Uczestnikow}}
+\begin{DoxyCompactList}\small\item\em Lista uczestników biorących udział w wyjeździe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Główna klasa zarządzająca planem podróży, uczestnikami i budżetem. 
+
+\label{class_plan_podrozy_doc-constructors}
+\Hypertarget{class_plan_podrozy_doc-constructors}
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_plan_podrozy_a687b98fc75968ca0dd8c33fa3b01fb7e}\index{PlanPodrozy@{PlanPodrozy}!PlanPodrozy@{PlanPodrozy}}
+\index{PlanPodrozy@{PlanPodrozy}!PlanPodrozy@{PlanPodrozy}}
+\doxysubsubsection{\texorpdfstring{PlanPodrozy()}{PlanPodrozy()}}
+{\footnotesize\ttfamily \label{class_plan_podrozy_a687b98fc75968ca0dd8c33fa3b01fb7e} 
+Plan\+Podrozy.\+Plan\+Podrozy (\begin{DoxyParamCaption}\item[{string}]{tytul\+Podrozy}{, }\item[{Date\+Time}]{data\+Rozpoczecia}{, }\item[{Date\+Time}]{data\+Zakonczenia}{, }\item[{double}]{budzet\+Calkowity}{}\end{DoxyParamCaption})}
+
+
+
+Inicjalizuje nowy plan podróży. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em tytul\+Podrozy} & Tytuł wyjazdu. \\
+\hline
+{\em data\+Rozpoczecia} & Data startu podróży. \\
+\hline
+{\em data\+Zakonczenia} & Data zakończenia podróży. \\
+\hline
+{\em budzet\+Calkowity} & Maksymalny zaplanowany budżet. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Wyjątki}
+{\em Argument\+Exception} & Rzucany, gdy tytuł jest pusty, daty są nielogiczne lub budżet jest ujemny. \\
+\hline
+\end{DoxyExceptions}
+
+
+\label{class_plan_podrozy_doc-func-members}
+\Hypertarget{class_plan_podrozy_doc-func-members}
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_plan_podrozy_ac66676767375b938917e981baae5abb1}\index{PlanPodrozy@{PlanPodrozy}!DodajPunkt@{DodajPunkt}}
+\index{DodajPunkt@{DodajPunkt}!PlanPodrozy@{PlanPodrozy}}
+\doxysubsubsection{\texorpdfstring{DodajPunkt()}{DodajPunkt()}}
+{\footnotesize\ttfamily \label{class_plan_podrozy_ac66676767375b938917e981baae5abb1} 
+void Plan\+Podrozy.\+Dodaj\+Punkt (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_punkt_harmonogramu}{Punkt\+Harmonogramu}}}]{punkt}{}\end{DoxyParamCaption})}
+
+
+
+Dodaje nowy punkt do harmonogramu podróży. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em punkt} & Punkt harmonogramu do dodania. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Wyjątki}
+{\em Argument\+Null\+Exception} & Rzucany, gdy przekazany punkt jest nullem. \\
+\hline
+{\em Argument\+Exception} & Rzucany, gdy punkt wykracza poza ramy wyjazdu. \\
+\hline
+{\em Kolizja\+Terminow\+Exception} & Rzucany, gdy punkt nakłada się czasowo z innym wydarzeniem. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_plan_podrozy_a06fb9a6f2237b8e4be848c0446472cdf}\index{PlanPodrozy@{PlanPodrozy}!DodajUczestnika@{DodajUczestnika}}
+\index{DodajUczestnika@{DodajUczestnika}!PlanPodrozy@{PlanPodrozy}}
+\doxysubsubsection{\texorpdfstring{DodajUczestnika()}{DodajUczestnika()}}
+{\footnotesize\ttfamily \label{class_plan_podrozy_a06fb9a6f2237b8e4be848c0446472cdf} 
+void Plan\+Podrozy.\+Dodaj\+Uczestnika (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_uczestnik}{Uczestnik}}}]{uczestnik}{}\end{DoxyParamCaption})}
+
+
+
+Dodaje nowego uczestnika wycieczki do planu. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em uczestnik} & Obiekt uczestnika do dodania. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Wyjątki}
+{\em Argument\+Null\+Exception} & Rzucany, gdy przekazany uczestnik jest nullem. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_plan_podrozy_a8ab0368a55700af4e26df27fd2d3b6ce}\index{PlanPodrozy@{PlanPodrozy}!GenerujPodsumowanie@{GenerujPodsumowanie}}
+\index{GenerujPodsumowanie@{GenerujPodsumowanie}!PlanPodrozy@{PlanPodrozy}}
+\doxysubsubsection{\texorpdfstring{GenerujPodsumowanie()}{GenerujPodsumowanie()}}
+{\footnotesize\ttfamily \label{class_plan_podrozy_a8ab0368a55700af4e26df27fd2d3b6ce} 
+void Plan\+Podrozy.\+Generuj\+Podsumowanie (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Generuje i wyświetla podsumowanie planu podróży na konsoli. 
+
+\Hypertarget{class_plan_podrozy_a97129cb9180b3d77eb10667e9ffda40f}\index{PlanPodrozy@{PlanPodrozy}!ObliczKosztCalkowity@{ObliczKosztCalkowity}}
+\index{ObliczKosztCalkowity@{ObliczKosztCalkowity}!PlanPodrozy@{PlanPodrozy}}
+\doxysubsubsection{\texorpdfstring{ObliczKosztCalkowity()}{ObliczKosztCalkowity()}}
+{\footnotesize\ttfamily \label{class_plan_podrozy_a97129cb9180b3d77eb10667e9ffda40f} 
+double Plan\+Podrozy.\+Oblicz\+Koszt\+Calkowity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Oblicza sumaryczny koszt wszystkich zaplanowanych punktów harmonogramu. 
+
+\begin{DoxyReturn}{Zwraca}
+Całkowity dotychczasowy koszt. 
+\end{DoxyReturn}
+\Hypertarget{class_plan_podrozy_af7385f96a274fa9e7f7b36f1ff00df38}\index{PlanPodrozy@{PlanPodrozy}!UsunPunkt@{UsunPunkt}}
+\index{UsunPunkt@{UsunPunkt}!PlanPodrozy@{PlanPodrozy}}
+\doxysubsubsection{\texorpdfstring{UsunPunkt()}{UsunPunkt()}}
+{\footnotesize\ttfamily \label{class_plan_podrozy_af7385f96a274fa9e7f7b36f1ff00df38} 
+void Plan\+Podrozy.\+Usun\+Punkt (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Usuwa punkt z harmonogramu na podstawie jego indeksu. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em id} & Identyfikator (indeks) punktu do usunięcia. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Wyjątki}
+{\em Argument\+Out\+Of\+Range\+Exception} & Rzucany, gdy indeks jest poza zakresem listy. \\
+\hline
+\end{DoxyExceptions}
+
+
+\label{class_plan_podrozy_doc-variable-members}
+\Hypertarget{class_plan_podrozy_doc-variable-members}
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_plan_podrozy_a938b74bf5aaf03c7a798afa4699429f1}\index{PlanPodrozy@{PlanPodrozy}!budzetCalkowity@{budzetCalkowity}}
+\index{budzetCalkowity@{budzetCalkowity}!PlanPodrozy@{PlanPodrozy}}
+\doxysubsubsection{\texorpdfstring{budzetCalkowity}{budzetCalkowity}}
+{\footnotesize\ttfamily \label{class_plan_podrozy_a938b74bf5aaf03c7a798afa4699429f1} 
+double Plan\+Podrozy.\+budzet\+Calkowity\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Maksymalny zaplanowany budżet. 
+
+\Hypertarget{class_plan_podrozy_ae3174a17deb6cae7d4c3dfd42d925e87}\index{PlanPodrozy@{PlanPodrozy}!dataRozpoczecia@{dataRozpoczecia}}
+\index{dataRozpoczecia@{dataRozpoczecia}!PlanPodrozy@{PlanPodrozy}}
+\doxysubsubsection{\texorpdfstring{dataRozpoczecia}{dataRozpoczecia}}
+{\footnotesize\ttfamily \label{class_plan_podrozy_ae3174a17deb6cae7d4c3dfd42d925e87} 
+Date\+Time Plan\+Podrozy.\+data\+Rozpoczecia\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Data startu podróży. 
+
+\Hypertarget{class_plan_podrozy_a6da2482b8fecccefeac8c4d4c168611c}\index{PlanPodrozy@{PlanPodrozy}!dataZakonczenia@{dataZakonczenia}}
+\index{dataZakonczenia@{dataZakonczenia}!PlanPodrozy@{PlanPodrozy}}
+\doxysubsubsection{\texorpdfstring{dataZakonczenia}{dataZakonczenia}}
+{\footnotesize\ttfamily \label{class_plan_podrozy_a6da2482b8fecccefeac8c4d4c168611c} 
+Date\+Time Plan\+Podrozy.\+data\+Zakonczenia\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Data zakończenia podróży. 
+
+\Hypertarget{class_plan_podrozy_a3812fd43eba28cc8187d71d51959d6af}\index{PlanPodrozy@{PlanPodrozy}!listaPunktow@{listaPunktow}}
+\index{listaPunktow@{listaPunktow}!PlanPodrozy@{PlanPodrozy}}
+\doxysubsubsection{\texorpdfstring{listaPunktow}{listaPunktow}}
+{\footnotesize\ttfamily \label{class_plan_podrozy_a3812fd43eba28cc8187d71d51959d6af} 
+List$<$\doxymbox{\hyperlink{class_punkt_harmonogramu}{Punkt\+Harmonogramu}}$>$ Plan\+Podrozy.\+lista\+Punktow\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Lista zadeklarowanych punktów harmonogramu. 
+
+\Hypertarget{class_plan_podrozy_a41ea3173abe2cee81598d50ecf479caa}\index{PlanPodrozy@{PlanPodrozy}!listaUczestnikow@{listaUczestnikow}}
+\index{listaUczestnikow@{listaUczestnikow}!PlanPodrozy@{PlanPodrozy}}
+\doxysubsubsection{\texorpdfstring{listaUczestnikow}{listaUczestnikow}}
+{\footnotesize\ttfamily \label{class_plan_podrozy_a41ea3173abe2cee81598d50ecf479caa} 
+List$<$\doxymbox{\hyperlink{class_uczestnik}{Uczestnik}}$>$ Plan\+Podrozy.\+lista\+Uczestnikow\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Lista uczestników biorących udział w wyjeździe. 
+
+\Hypertarget{class_plan_podrozy_a8a5888e423208e8180fb4d0c1eda8ca1}\index{PlanPodrozy@{PlanPodrozy}!tytulPodrozy@{tytulPodrozy}}
+\index{tytulPodrozy@{tytulPodrozy}!PlanPodrozy@{PlanPodrozy}}
+\doxysubsubsection{\texorpdfstring{tytulPodrozy}{tytulPodrozy}}
+{\footnotesize\ttfamily \label{class_plan_podrozy_a8a5888e423208e8180fb4d0c1eda8ca1} 
+string Plan\+Podrozy.\+tytul\+Podrozy\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tytuł wyjazdu. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku:\+\begin{DoxyCompactItemize}
+\item 
+Projekt\+PO/\+\doxymbox{\hyperlink{_plan_podrozy_8cs}{Plan\+Podrozy.\+cs}}\end{DoxyCompactItemize}

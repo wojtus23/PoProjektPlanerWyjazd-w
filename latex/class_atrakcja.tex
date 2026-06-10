@@ -1,0 +1,184 @@
+\doxysection{Dokumentacja klasy Atrakcja}
+\hypertarget{class_atrakcja}{}\label{class_atrakcja}\index{Atrakcja@{Atrakcja}}
+
+
+Klasa reprezentująca atrakcję turystyczną w harmonogramie podróży.  
+
+
+Diagram dziedziczenia dla Atrakcja\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_atrakcja}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_atrakcja_a297ebf14274628192fc324f1d58019c5}{Atrakcja}} (string nazwa, Date\+Time czas\+Start, Date\+Time czas\+Koniec, double szacowany\+Koszt, string typ\+Atrakcji, string krotki\+Opis)
+\begin{DoxyCompactList}\small\item\em Inicjalizuje nową instancję klasy \doxylink{class_atrakcja}{Atrakcja}. \end{DoxyCompactList}\item 
+override void \doxymbox{\hyperlink{class_atrakcja_a20aa01ada3bbbd98a794b82473f2a44c}{Pokaz\+Szczegoly}} ()
+\begin{DoxyCompactList}\small\item\em Wyświetla szczegółowe informacje na temat atrakcji. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_atrakcja_a77c21e5444035064b39d05ec774ee578}{Wykonaj\+Rezerwacje}} ()
+\begin{DoxyCompactList}\small\item\em Zmienia stan rezerwacji atrakcji na zarezerwowaną. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_atrakcja_acf57b5088693101ff1ec01da69fe781d}{Anuluj\+Rezerwacje}} ()
+\begin{DoxyCompactList}\small\item\em Anuluje aktywną rezerwację atrakcji. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \doxymbox{\hyperlink{class_punkt_harmonogramu}{Punkt\+Harmonogramu}}}
+\begin{DoxyCompactItemize}
+\item 
+Time\+Span \doxymbox{\hyperlink{class_punkt_harmonogramu_a1d7e221953215d9ee3da208dd39ea97d}{Oblicz\+Czas\+Trwania}} ()
+\begin{DoxyCompactList}\small\item\em Oblicza czas trwania punktu harmonogramu. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_punkt_harmonogramu_aac8c2e65903f1f71d8dfcd41c964fec4}{Czy\+Koliduje}} (\doxymbox{\hyperlink{class_punkt_harmonogramu}{Punkt\+Harmonogramu}} inny\+Punkt)
+\begin{DoxyCompactList}\small\item\em Sprawdza, czy ten punkt nakłada się czasowo z innym punktem harmonogramu. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_punkt_harmonogramu_a8f6923afd3daeb0a8bda55ced9059e8c}{Pokaz\+Szczegoly}} ()
+\begin{DoxyCompactList}\small\item\em Abstrakcyjna metoda do wyświetlania szczegółów punktu harmonogramu w konsoli. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_punkt_harmonogramu_a69e6ec2d04e30b1fdd2b7a6cdd5e1fa7}{Compare\+To}} (\doxymbox{\hyperlink{class_punkt_harmonogramu}{Punkt\+Harmonogramu}}? inny)
+\begin{DoxyCompactList}\small\item\em Porównuje dwa punkty po czasie ich rozpoczęcia, co umożliwia ich sortowanie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+string \doxymbox{\hyperlink{class_atrakcja_a83df8b4ad1f2a08803ffc878f6087b67}{typ\+Atrakcji}}
+\begin{DoxyCompactList}\small\item\em Typ atrakcji turystycznej. \end{DoxyCompactList}\item 
+string \doxymbox{\hyperlink{class_atrakcja_add76ca3c2d0821d98e1d0aeabb85bba9}{krotki\+Opis}}
+\begin{DoxyCompactList}\small\item\em Krótki opis wydarzenia. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Dodatkowe dziedziczone składowe}
+\doxysubsection*{Metody chronione dziedziczone z \doxymbox{\hyperlink{class_punkt_harmonogramu}{Punkt\+Harmonogramu}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_punkt_harmonogramu_a4e4cb3574430476e7f283c0c75e1ec2d}{Punkt\+Harmonogramu}} (string nazwa, Date\+Time czas\+Start, Date\+Time czas\+Koniec, double szacowany\+Koszt, \doxymbox{\hyperlink{_enum_8cs_a0f3f914e1ac293bcd2b86c529aec61f8}{Typ\+Punktu}} typ\+Punktu)
+\begin{DoxyCompactList}\small\item\em Inicjalizuje nową instancję klasy bazowej \doxylink{class_punkt_harmonogramu}{Punkt\+Harmonogramu}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty chronione dziedziczone z \doxymbox{\hyperlink{class_punkt_harmonogramu}{Punkt\+Harmonogramu}}}
+\begin{DoxyCompactItemize}
+\item 
+string \doxymbox{\hyperlink{class_punkt_harmonogramu_acd67e21afdd38fbba7fe5bf24df41ec1}{nazwa}}
+\begin{DoxyCompactList}\small\item\em Nazwa punktu harmonogramu. \end{DoxyCompactList}\item 
+Date\+Time \doxymbox{\hyperlink{class_punkt_harmonogramu_a7f85784f0e94f4cf67abed47d38a72d3}{czas\+Start}}
+\begin{DoxyCompactList}\small\item\em Czas rozpoczęcia. \end{DoxyCompactList}\item 
+Date\+Time \doxymbox{\hyperlink{class_punkt_harmonogramu_a2fc2eeebbb5a370fe9f29e1786cf4ea3}{czas\+Koniec}}
+\begin{DoxyCompactList}\small\item\em Czas zakończenia. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_punkt_harmonogramu_afbe242160cdc70cda8844ae7c080aeb1}{szacowany\+Koszt}}
+\begin{DoxyCompactList}\small\item\em Przewidywany koszt. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{_enum_8cs_a0f3f914e1ac293bcd2b86c529aec61f8}{Typ\+Punktu}} \doxymbox{\hyperlink{class_punkt_harmonogramu_a34cbba6fd8512cafd7c2a115bdb673a8}{typ\+Punktu}}
+\begin{DoxyCompactList}\small\item\em Typ punktu. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{_enum_8cs_ab2d56201c4f46a09ecd76b1511652ec9}{Stan\+Rezerwacji}} \doxymbox{\hyperlink{class_punkt_harmonogramu_a4b139396e2689eca6e6c332a5ef64a1c}{stan\+Rezerwacji}}
+\begin{DoxyCompactList}\small\item\em Stan rezerwacji punktu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Właściwości dziedziczone z \doxymbox{\hyperlink{class_punkt_harmonogramu}{Punkt\+Harmonogramu}}}
+\begin{DoxyCompactItemize}
+\item 
+double \doxymbox{\hyperlink{class_punkt_harmonogramu_a9b24b3399d7bc9248f782178627df021}{Szacowany\+Koszt}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Właściwość pobierająca szacowany koszt punktu harmonogramu. \end{DoxyCompactList}\item 
+Date\+Time \doxymbox{\hyperlink{class_punkt_harmonogramu_acee88f26df5b2570ab770fa12901c86a}{Czas\+Start}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Czas rozpoczęcia wydarzenia (właściwość publiczna). \end{DoxyCompactList}\item 
+Date\+Time \doxymbox{\hyperlink{class_punkt_harmonogramu_a4e0ea266eb69c2d2613b00d110e34b08}{Czas\+Koniec}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Czas zakończenia wydarzenia (właściwość publiczna). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa reprezentująca atrakcję turystyczną w harmonogramie podróży. 
+
+\label{class_atrakcja_doc-constructors}
+\Hypertarget{class_atrakcja_doc-constructors}
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_atrakcja_a297ebf14274628192fc324f1d58019c5}\index{Atrakcja@{Atrakcja}!Atrakcja@{Atrakcja}}
+\index{Atrakcja@{Atrakcja}!Atrakcja@{Atrakcja}}
+\doxysubsubsection{\texorpdfstring{Atrakcja()}{Atrakcja()}}
+{\footnotesize\ttfamily \label{class_atrakcja_a297ebf14274628192fc324f1d58019c5} 
+Atrakcja.\+Atrakcja (\begin{DoxyParamCaption}\item[{string}]{nazwa}{, }\item[{Date\+Time}]{czas\+Start}{, }\item[{Date\+Time}]{czas\+Koniec}{, }\item[{double}]{szacowany\+Koszt}{, }\item[{string}]{typ\+Atrakcji}{, }\item[{string}]{krotki\+Opis}{}\end{DoxyParamCaption})}
+
+
+
+Inicjalizuje nową instancję klasy \doxylink{class_atrakcja}{Atrakcja}. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em nazwa} & Nazwa atrakcji. \\
+\hline
+{\em czas\+Start} & Data i czas rozpoczęcia. \\
+\hline
+{\em czas\+Koniec} & Data i czas zakończenia. \\
+\hline
+{\em szacowany\+Koszt} & Przewidywany koszt udziału w atrakcji. \\
+\hline
+{\em typ\+Atrakcji} & Typ atrakcji (np. muzeum, park rozrywki). \\
+\hline
+{\em krotki\+Opis} & Krótki opis miejsca lub wydarzenia. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_atrakcja_doc-func-members}
+\Hypertarget{class_atrakcja_doc-func-members}
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_atrakcja_acf57b5088693101ff1ec01da69fe781d}\index{Atrakcja@{Atrakcja}!AnulujRezerwacje@{AnulujRezerwacje}}
+\index{AnulujRezerwacje@{AnulujRezerwacje}!Atrakcja@{Atrakcja}}
+\doxysubsubsection{\texorpdfstring{AnulujRezerwacje()}{AnulujRezerwacje()}}
+{\footnotesize\ttfamily \label{class_atrakcja_acf57b5088693101ff1ec01da69fe781d} 
+bool Atrakcja.\+Anuluj\+Rezerwacje (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Anuluje aktywną rezerwację atrakcji. 
+
+\begin{DoxyReturn}{Zwraca}
+Zawsze zwraca true po pomyślnej zmianie statusu. 
+\end{DoxyReturn}
+
+
+Implementuje \doxymbox{\hyperlink{interface_i_wymaga_rezerwacji_a724c3b2714db905f620f462b16f7f961}{IWymaga\+Rezerwacji}}.
+
+\Hypertarget{class_atrakcja_a20aa01ada3bbbd98a794b82473f2a44c}\index{Atrakcja@{Atrakcja}!PokazSzczegoly@{PokazSzczegoly}}
+\index{PokazSzczegoly@{PokazSzczegoly}!Atrakcja@{Atrakcja}}
+\doxysubsubsection{\texorpdfstring{PokazSzczegoly()}{PokazSzczegoly()}}
+{\footnotesize\ttfamily \label{class_atrakcja_a20aa01ada3bbbd98a794b82473f2a44c} 
+override void Atrakcja.\+Pokaz\+Szczegoly (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Wyświetla szczegółowe informacje na temat atrakcji. 
+
+\Hypertarget{class_atrakcja_a77c21e5444035064b39d05ec774ee578}\index{Atrakcja@{Atrakcja}!WykonajRezerwacje@{WykonajRezerwacje}}
+\index{WykonajRezerwacje@{WykonajRezerwacje}!Atrakcja@{Atrakcja}}
+\doxysubsubsection{\texorpdfstring{WykonajRezerwacje()}{WykonajRezerwacje()}}
+{\footnotesize\ttfamily \label{class_atrakcja_a77c21e5444035064b39d05ec774ee578} 
+bool Atrakcja.\+Wykonaj\+Rezerwacje (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Zmienia stan rezerwacji atrakcji na zarezerwowaną. 
+
+\begin{DoxyReturn}{Zwraca}
+Zawsze zwraca true po pomyślnej zmianie statusu. 
+\end{DoxyReturn}
+
+
+Implementuje \doxymbox{\hyperlink{interface_i_wymaga_rezerwacji_abcf0a2c477589673ff0d25ebbbddbbd0}{IWymaga\+Rezerwacji}}.
+
+
+
+\label{class_atrakcja_doc-variable-members}
+\Hypertarget{class_atrakcja_doc-variable-members}
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_atrakcja_add76ca3c2d0821d98e1d0aeabb85bba9}\index{Atrakcja@{Atrakcja}!krotkiOpis@{krotkiOpis}}
+\index{krotkiOpis@{krotkiOpis}!Atrakcja@{Atrakcja}}
+\doxysubsubsection{\texorpdfstring{krotkiOpis}{krotkiOpis}}
+{\footnotesize\ttfamily \label{class_atrakcja_add76ca3c2d0821d98e1d0aeabb85bba9} 
+string Atrakcja.\+krotki\+Opis\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Krótki opis wydarzenia. 
+
+\Hypertarget{class_atrakcja_a83df8b4ad1f2a08803ffc878f6087b67}\index{Atrakcja@{Atrakcja}!typAtrakcji@{typAtrakcji}}
+\index{typAtrakcji@{typAtrakcji}!Atrakcja@{Atrakcja}}
+\doxysubsubsection{\texorpdfstring{typAtrakcji}{typAtrakcji}}
+{\footnotesize\ttfamily \label{class_atrakcja_a83df8b4ad1f2a08803ffc878f6087b67} 
+string Atrakcja.\+typ\+Atrakcji\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Typ atrakcji turystycznej. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku:\+\begin{DoxyCompactItemize}
+\item 
+Projekt\+PO/\+\doxymbox{\hyperlink{_atrakcja_8cs}{Atrakcja.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Plan wyjazdu: Dokumentacja klasy Uczestnik</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Plan wyjazdu
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano za pomocą Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_uczestnik.html','','class_uczestnik-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Dokumentacja klasy Uczestnik</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Klasa reprezentująca uczestnika podróży.  
+ <a href="#details">Więcej...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a9863cfa2fa0e3e58b1978648d08b5d71" id="r_a9863cfa2fa0e3e58b1978648d08b5d71"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9863cfa2fa0e3e58b1978648d08b5d71">Uczestnik</a> (string imie, string nazwisko, int wiek)</td></tr>
+<tr class="memdesc:a9863cfa2fa0e3e58b1978648d08b5d71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicjalizuje nową instancję klasy <a class="el" href="class_uczestnik.html" title="Klasa reprezentująca uczestnika podróży.">Uczestnik</a>.  <br /></td></tr>
+<tr class="memitem:a2a4a4f1543bf1ec9e7dcbcc80f7e462c" id="r_a2a4a4f1543bf1ec9e7dcbcc80f7e462c"><td class="memItemLeft">string&#160;</td><td class="memItemRight"><a class="el" href="#a2a4a4f1543bf1ec9e7dcbcc80f7e462c">PobierzPelneDane</a> ()</td></tr>
+<tr class="memdesc:a2a4a4f1543bf1ec9e7dcbcc80f7e462c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwraca pełne dane uczestnika w czytelnym formacie.  <br /></td></tr>
+<tr class="memitem:a1626d212e4725dad253bfee839942814" id="r_a1626d212e4725dad253bfee839942814"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a1626d212e4725dad253bfee839942814">CzyJestPelnoletni</a> ()</td></tr>
+<tr class="memdesc:a1626d212e4725dad253bfee839942814"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprawdza, czy uczestnik jest pełnoletni.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
+Właściwości</h2></td></tr>
+<tr class="memitem:a6d3d23e1498c227f486c698fd4d6b06c" id="r_a6d3d23e1498c227f486c698fd4d6b06c"><td class="memItemLeft">string&#160;</td><td class="memItemRight"><a class="el" href="#a6d3d23e1498c227f486c698fd4d6b06c">Imie</a><code> [get]</code></td></tr>
+<tr class="memdesc:a6d3d23e1498c227f486c698fd4d6b06c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imię uczestnika.  <br /></td></tr>
+<tr class="memitem:a1f05072c10b8d9dd1accb13ab1f42d8f" id="r_a1f05072c10b8d9dd1accb13ab1f42d8f"><td class="memItemLeft">string&#160;</td><td class="memItemRight"><a class="el" href="#a1f05072c10b8d9dd1accb13ab1f42d8f">Nazwisko</a><code> [get]</code></td></tr>
+<tr class="memdesc:a1f05072c10b8d9dd1accb13ab1f42d8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nazwisko uczestnika.  <br /></td></tr>
+<tr class="memitem:a1a5840e85ba08163293166c2646b48bf" id="r_a1a5840e85ba08163293166c2646b48bf"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a1a5840e85ba08163293166c2646b48bf">wiek</a><code> [get]</code></td></tr>
+<tr class="memdesc:a1a5840e85ba08163293166c2646b48bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wiek uczestnika.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Klasa reprezentująca uczestnika podróży. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a id="a9863cfa2fa0e3e58b1978648d08b5d71" name="a9863cfa2fa0e3e58b1978648d08b5d71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9863cfa2fa0e3e58b1978648d08b5d71">&#9670;&#160;</a></span>Uczestnik()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Uczestnik.Uczestnik </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>imie</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>nazwisko</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>wiek</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicjalizuje nową instancję klasy <a class="el" href="class_uczestnik.html" title="Klasa reprezentująca uczestnika podróży.">Uczestnik</a>. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">imie</td><td>Imię uczestnika. </td></tr>
+    <tr><td class="paramname">nazwisko</td><td>Nazwisko uczestnika. </td></tr>
+    <tr><td class="paramname">wiek</td><td>Wiek uczestnika w latach. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Wyjątki</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentException</td><td>Wyrzucany, gdy imię lub nazwisko są puste, albo gdy wiek jest ujemny. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="a1626d212e4725dad253bfee839942814" name="a1626d212e4725dad253bfee839942814"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1626d212e4725dad253bfee839942814">&#9670;&#160;</a></span>CzyJestPelnoletni()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Uczestnik.CzyJestPelnoletni </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sprawdza, czy uczestnik jest pełnoletni. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>Zwraca true, jeśli uczestnik ma co najmniej 18 lat, w przeciwnym razie false. </dd></dl>
+
+</div>
+</div>
+<a id="a2a4a4f1543bf1ec9e7dcbcc80f7e462c" name="a2a4a4f1543bf1ec9e7dcbcc80f7e462c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a4a4f1543bf1ec9e7dcbcc80f7e462c">&#9670;&#160;</a></span>PobierzPelneDane()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Uczestnik.PobierzPelneDane </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zwraca pełne dane uczestnika w czytelnym formacie. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>Sformatowany ciąg znaków zawierający imię, nazwisko i wiek. </dd></dl>
+
+</div>
+</div>
+<a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">Dokumentacja właściwości</h2>
+<a id="a6d3d23e1498c227f486c698fd4d6b06c" name="a6d3d23e1498c227f486c698fd4d6b06c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d3d23e1498c227f486c698fd4d6b06c">&#9670;&#160;</a></span>Imie</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Uczestnik.Imie</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Imię uczestnika. </p>
+
+</div>
+</div>
+<a id="a1f05072c10b8d9dd1accb13ab1f42d8f" name="a1f05072c10b8d9dd1accb13ab1f42d8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f05072c10b8d9dd1accb13ab1f42d8f">&#9670;&#160;</a></span>Nazwisko</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Uczestnik.Nazwisko</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Nazwisko uczestnika. </p>
+
+</div>
+</div>
+<a id="a1a5840e85ba08163293166c2646b48bf" name="a1a5840e85ba08163293166c2646b48bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a5840e85ba08163293166c2646b48bf">&#9670;&#160;</a></span>wiek</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Uczestnik.wiek</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Wiek uczestnika. </p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z pliku:<ul>
+<li>ProjektPO/<a class="el" href="_uczestnik_8cs.html">Uczestnik.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_uczestnik.html">Uczestnik</a></li>
+    <li class="footer">Wygenerowano za pomocą <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

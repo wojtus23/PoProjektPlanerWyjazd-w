@@ -1,0 +1,157 @@
+\doxysection{Dokumentacja klasy Transport\+Prywatny}
+\hypertarget{class_transport_prywatny}{}\label{class_transport_prywatny}\index{TransportPrywatny@{TransportPrywatny}}
+
+
+Klasa reprezentująca przejazd prywatnym środkiem transportu.  
+
+
+Diagram dziedziczenia dla Transport\+Prywatny\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_transport_prywatny}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_transport_prywatny_a6ed013f23a3eccb9e090b4e469b4ec32}{Transport\+Prywatny}} (string nazwa, Date\+Time czas\+Start, Date\+Time czas\+Koniec, double szacowany\+Koszt, string srodek\+Transportu, string miejsce\+Odjazdu, string miejsce\+Przyjazdu)
+\begin{DoxyCompactList}\small\item\em Inicjalizuje nową instancję klasy \doxylink{class_transport_prywatny}{Transport\+Prywatny}. \end{DoxyCompactList}\item 
+override void \doxymbox{\hyperlink{class_transport_prywatny_a3fa099ee75f6adeb11918c69072ab205}{Pokaz\+Szczegoly}} ()
+\begin{DoxyCompactList}\small\item\em Wyświetla informacje o przejeździe prywatnym wraz z kosztami paliwa. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_transport_prywatny_a5b5fec4ca913903faf7eca2b4af7dd8d}{Oblicz\+Koszt\+Paliwa}} ()
+\begin{DoxyCompactList}\small\item\em Pobiera wartość kosztów poniesionych na paliwo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \doxymbox{\hyperlink{class_transport}{Transport}}}
+\begin{DoxyCompactItemize}
+\item 
+override void \doxymbox{\hyperlink{class_transport_a24fecb9ec8c43c64d0d991fe1bcb728c}{Pokaz\+Szczegoly}} ()
+\begin{DoxyCompactList}\small\item\em Wyświetla podstawowe informacje o transporcie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \doxymbox{\hyperlink{class_punkt_harmonogramu}{Punkt\+Harmonogramu}}}
+\begin{DoxyCompactItemize}
+\item 
+Time\+Span \doxymbox{\hyperlink{class_punkt_harmonogramu_a1d7e221953215d9ee3da208dd39ea97d}{Oblicz\+Czas\+Trwania}} ()
+\begin{DoxyCompactList}\small\item\em Oblicza czas trwania punktu harmonogramu. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_punkt_harmonogramu_aac8c2e65903f1f71d8dfcd41c964fec4}{Czy\+Koliduje}} (\doxymbox{\hyperlink{class_punkt_harmonogramu}{Punkt\+Harmonogramu}} inny\+Punkt)
+\begin{DoxyCompactList}\small\item\em Sprawdza, czy ten punkt nakłada się czasowo z innym punktem harmonogramu. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_punkt_harmonogramu_a8f6923afd3daeb0a8bda55ced9059e8c}{Pokaz\+Szczegoly}} ()
+\begin{DoxyCompactList}\small\item\em Abstrakcyjna metoda do wyświetlania szczegółów punktu harmonogramu w konsoli. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_punkt_harmonogramu_a69e6ec2d04e30b1fdd2b7a6cdd5e1fa7}{Compare\+To}} (\doxymbox{\hyperlink{class_punkt_harmonogramu}{Punkt\+Harmonogramu}}? inny)
+\begin{DoxyCompactList}\small\item\em Porównuje dwa punkty po czasie ich rozpoczęcia, co umożliwia ich sortowanie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+double \doxymbox{\hyperlink{class_transport_prywatny_a412571bd332b78c6d67ff17f1b143143}{koszt\+Paliwa}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Dodatkowe dziedziczone składowe}
+\doxysubsection*{Metody chronione dziedziczone z \doxymbox{\hyperlink{class_transport}{Transport}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_transport_a79460475df2b71c0c008f7acb6c70ddb}{Transport}} (string nazwa, Date\+Time czas\+Start, Date\+Time czas\+Koniec, double szacowany\+Koszt, string srodek\+Transportu, string miejsce\+Odjazdu, string miejsce\+Przyjazdu, \doxymbox{\hyperlink{_enum_8cs_a0f3f914e1ac293bcd2b86c529aec61f8}{Typ\+Punktu}} typ\+Punktu)
+\begin{DoxyCompactList}\small\item\em Inicjalizuje nową instancję klasy bazowej \doxylink{class_transport}{Transport}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody chronione dziedziczone z \doxymbox{\hyperlink{class_punkt_harmonogramu}{Punkt\+Harmonogramu}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_punkt_harmonogramu_a4e4cb3574430476e7f283c0c75e1ec2d}{Punkt\+Harmonogramu}} (string nazwa, Date\+Time czas\+Start, Date\+Time czas\+Koniec, double szacowany\+Koszt, \doxymbox{\hyperlink{_enum_8cs_a0f3f914e1ac293bcd2b86c529aec61f8}{Typ\+Punktu}} typ\+Punktu)
+\begin{DoxyCompactList}\small\item\em Inicjalizuje nową instancję klasy bazowej \doxylink{class_punkt_harmonogramu}{Punkt\+Harmonogramu}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty chronione dziedziczone z \doxymbox{\hyperlink{class_punkt_harmonogramu}{Punkt\+Harmonogramu}}}
+\begin{DoxyCompactItemize}
+\item 
+string \doxymbox{\hyperlink{class_punkt_harmonogramu_acd67e21afdd38fbba7fe5bf24df41ec1}{nazwa}}
+\begin{DoxyCompactList}\small\item\em Nazwa punktu harmonogramu. \end{DoxyCompactList}\item 
+Date\+Time \doxymbox{\hyperlink{class_punkt_harmonogramu_a7f85784f0e94f4cf67abed47d38a72d3}{czas\+Start}}
+\begin{DoxyCompactList}\small\item\em Czas rozpoczęcia. \end{DoxyCompactList}\item 
+Date\+Time \doxymbox{\hyperlink{class_punkt_harmonogramu_a2fc2eeebbb5a370fe9f29e1786cf4ea3}{czas\+Koniec}}
+\begin{DoxyCompactList}\small\item\em Czas zakończenia. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_punkt_harmonogramu_afbe242160cdc70cda8844ae7c080aeb1}{szacowany\+Koszt}}
+\begin{DoxyCompactList}\small\item\em Przewidywany koszt. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{_enum_8cs_a0f3f914e1ac293bcd2b86c529aec61f8}{Typ\+Punktu}} \doxymbox{\hyperlink{class_punkt_harmonogramu_a34cbba6fd8512cafd7c2a115bdb673a8}{typ\+Punktu}}
+\begin{DoxyCompactList}\small\item\em Typ punktu. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{_enum_8cs_ab2d56201c4f46a09ecd76b1511652ec9}{Stan\+Rezerwacji}} \doxymbox{\hyperlink{class_punkt_harmonogramu_a4b139396e2689eca6e6c332a5ef64a1c}{stan\+Rezerwacji}}
+\begin{DoxyCompactList}\small\item\em Stan rezerwacji punktu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Właściwości dziedziczone z \doxymbox{\hyperlink{class_punkt_harmonogramu}{Punkt\+Harmonogramu}}}
+\begin{DoxyCompactItemize}
+\item 
+double \doxymbox{\hyperlink{class_punkt_harmonogramu_a9b24b3399d7bc9248f782178627df021}{Szacowany\+Koszt}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Właściwość pobierająca szacowany koszt punktu harmonogramu. \end{DoxyCompactList}\item 
+Date\+Time \doxymbox{\hyperlink{class_punkt_harmonogramu_acee88f26df5b2570ab770fa12901c86a}{Czas\+Start}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Czas rozpoczęcia wydarzenia (właściwość publiczna). \end{DoxyCompactList}\item 
+Date\+Time \doxymbox{\hyperlink{class_punkt_harmonogramu_a4e0ea266eb69c2d2613b00d110e34b08}{Czas\+Koniec}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Czas zakończenia wydarzenia (właściwość publiczna). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa reprezentująca przejazd prywatnym środkiem transportu. 
+
+\label{class_transport_prywatny_doc-constructors}
+\Hypertarget{class_transport_prywatny_doc-constructors}
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_transport_prywatny_a6ed013f23a3eccb9e090b4e469b4ec32}\index{TransportPrywatny@{TransportPrywatny}!TransportPrywatny@{TransportPrywatny}}
+\index{TransportPrywatny@{TransportPrywatny}!TransportPrywatny@{TransportPrywatny}}
+\doxysubsubsection{\texorpdfstring{TransportPrywatny()}{TransportPrywatny()}}
+{\footnotesize\ttfamily \label{class_transport_prywatny_a6ed013f23a3eccb9e090b4e469b4ec32} 
+Transport\+Prywatny.\+Transport\+Prywatny (\begin{DoxyParamCaption}\item[{string}]{nazwa}{, }\item[{Date\+Time}]{czas\+Start}{, }\item[{Date\+Time}]{czas\+Koniec}{, }\item[{double}]{szacowany\+Koszt}{, }\item[{string}]{srodek\+Transportu}{, }\item[{string}]{miejsce\+Odjazdu}{, }\item[{string}]{miejsce\+Przyjazdu}{}\end{DoxyParamCaption})}
+
+
+
+Inicjalizuje nową instancję klasy \doxylink{class_transport_prywatny}{Transport\+Prywatny}. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em nazwa} & Nazwa etapu podróży. \\
+\hline
+{\em czas\+Start} & Czas wyjazdu. \\
+\hline
+{\em czas\+Koniec} & Czas dojazdu na miejsce. \\
+\hline
+{\em szacowany\+Koszt} & Szacowany koszt przejazdu. \\
+\hline
+{\em srodek\+Transportu} & Pojazd. \\
+\hline
+{\em miejsce\+Odjazdu} & Punkt startowy. \\
+\hline
+{\em miejsce\+Przyjazdu} & Punkt docelowy. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_transport_prywatny_doc-func-members}
+\Hypertarget{class_transport_prywatny_doc-func-members}
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_transport_prywatny_a5b5fec4ca913903faf7eca2b4af7dd8d}\index{TransportPrywatny@{TransportPrywatny}!ObliczKosztPaliwa@{ObliczKosztPaliwa}}
+\index{ObliczKosztPaliwa@{ObliczKosztPaliwa}!TransportPrywatny@{TransportPrywatny}}
+\doxysubsubsection{\texorpdfstring{ObliczKosztPaliwa()}{ObliczKosztPaliwa()}}
+{\footnotesize\ttfamily \label{class_transport_prywatny_a5b5fec4ca913903faf7eca2b4af7dd8d} 
+double Transport\+Prywatny.\+Oblicz\+Koszt\+Paliwa (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Pobiera wartość kosztów poniesionych na paliwo. 
+
+\begin{DoxyReturn}{Zwraca}
+Koszt paliwa jako wartość zmiennoprzecinkowa. 
+\end{DoxyReturn}
+\Hypertarget{class_transport_prywatny_a3fa099ee75f6adeb11918c69072ab205}\index{TransportPrywatny@{TransportPrywatny}!PokazSzczegoly@{PokazSzczegoly}}
+\index{PokazSzczegoly@{PokazSzczegoly}!TransportPrywatny@{TransportPrywatny}}
+\doxysubsubsection{\texorpdfstring{PokazSzczegoly()}{PokazSzczegoly()}}
+{\footnotesize\ttfamily \label{class_transport_prywatny_a3fa099ee75f6adeb11918c69072ab205} 
+override void Transport\+Prywatny.\+Pokaz\+Szczegoly (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Wyświetla informacje o przejeździe prywatnym wraz z kosztami paliwa. 
+
+
+
+\label{class_transport_prywatny_doc-variable-members}
+\Hypertarget{class_transport_prywatny_doc-variable-members}
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_transport_prywatny_a412571bd332b78c6d67ff17f1b143143}\index{TransportPrywatny@{TransportPrywatny}!kosztPaliwa@{kosztPaliwa}}
+\index{kosztPaliwa@{kosztPaliwa}!TransportPrywatny@{TransportPrywatny}}
+\doxysubsubsection{\texorpdfstring{kosztPaliwa}{kosztPaliwa}}
+{\footnotesize\ttfamily \label{class_transport_prywatny_a412571bd332b78c6d67ff17f1b143143} 
+double Transport\+Prywatny.\+koszt\+Paliwa\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku:\+\begin{DoxyCompactItemize}
+\item 
+Projekt\+PO/\+\doxymbox{\hyperlink{_transport_prywatny_8cs}{Transport\+Prywatny.\+cs}}\end{DoxyCompactItemize}
