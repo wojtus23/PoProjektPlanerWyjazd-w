@@ -23,14 +23,14 @@ public class TransportPubliczny : Transport, IWymagaRezerwacji
 
     public bool WykonajRezerwacje()
     {
-        stanRezerwacji = stanRezerwacji.Zarezerwowana;
+        stanRezerwacji = StanRezerwacji.Zarezerwowana;
         Console.WriteLine($"Zarezerwowano przejazd linią '{numerLini}'.");
         return true;
     }
 
     public bool AnulujRezerwacje()
     {
-        stanRezerwacji = stanRezerwacji.Anulowana;
+        stanRezerwacji = StanRezerwacji.Anulowana;
         Console.WriteLine($"Anulowano przejazd linią '{numerLini}'.");
         return true;
     }

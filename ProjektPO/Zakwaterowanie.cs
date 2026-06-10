@@ -28,14 +28,14 @@ public class Zakwaterowanie : PunktHarmonogramu, IWymagaRezerwacji
 
     public bool WykonajRezerwacje()
     {
-        stanRezerwacji = stanRezerwacji.Zarezerwowana;
+        stanRezerwacji = StanRezerwacji.Zarezerwowana;
         Console.WriteLine($"Zarezerwowano nocleg w obiekcie '{nazwaObiektu}'.");
         return true;
     }
 
     public bool AnulujRezerwacje()
     {
-        stanRezerwacji = stanRezerwacji.Anulowana;
+        stanRezerwacji = StanRezerwacji.Anulowana;
         Console.WriteLine($"Anulowano rezerwację noclegu w obiekcie '{nazwaObiektu}'.");
         return true;
     }

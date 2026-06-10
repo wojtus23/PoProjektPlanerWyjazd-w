@@ -7,7 +7,7 @@ public abstract class PunktHarmonogramu : IComparable<PunktHarmonogramu>
     protected DateTime czasKoniec;
     protected double szacowanyKoszt;
     protected TypPunktu typPunktu;
-    protected stanRezerwacji stanRezerwacji;
+    protected StanRezerwacji stanRezerwacji;
 
     public double SzacowanyKoszt => szacowanyKoszt;
 
@@ -27,7 +27,7 @@ public abstract class PunktHarmonogramu : IComparable<PunktHarmonogramu>
         this.czasKoniec = czasKoniec;
         this.szacowanyKoszt = szacowanyKoszt;
         this.typPunktu = typPunktu;
-        this.stanRezerwacji = stanRezerwacji.Oczekująca;
+        this.stanRezerwacji = StanRezerwacji.Oczekująca;
     }
 
     public TimeSpan ObliczCzasTrwania()
@@ -37,9 +37,9 @@ public abstract class PunktHarmonogramu : IComparable<PunktHarmonogramu>
 
     public bool CzyKoliduje(PunktHarmonogramu innyPunkt)
     {
-        if (innyPunkt.typPunktu != this.typPunktu)
-            return false;
         if (innyPunkt == null) 
+            return false;
+        if (innyPunkt.typPunktu != this.typPunktu)
             return false;
 
         return this.czasStart < innyPunkt.czasKoniec && innyPunkt.czasStart < this.czasKoniec;

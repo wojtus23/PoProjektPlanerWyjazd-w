@@ -183,17 +183,6 @@ public class Konsola
                 string srodekTransportuPrywatny = konsola.PobierzTekst("Podaj środek transportu: ");
                 string miejsceOdjazduPrywatny = konsola.PobierzTekst("Podaj miejsce odjazdu: ");
                 string miejscePrzyjazduPrywatny = konsola.PobierzTekst("Podaj miejsce przyjazdu: ");
-                double kosztPaliwa;
-                while (true)
-                {
-                    Console.Write("Podaj koszt paliwa: ");
-                    string? input = Console.ReadLine();
-                    if (double.TryParse(input, out kosztPaliwa) && kosztPaliwa >= 0)
-                    {
-                        break;
-                    }
-                    Console.WriteLine("Niepoprawny koszt. Proszę wprowadzić nieujemną liczbę.");
-                }
                 punkt = new TransportPrywatny(nazwa, czasStart, czasKoniec, szacowanyKoszt, srodekTransportuPrywatny, miejsceOdjazduPrywatny, miejscePrzyjazduPrywatny);
                 break;
         }

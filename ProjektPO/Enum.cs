@@ -14,7 +14,7 @@ public enum RodzajBiletu
     Ulgowy
 }
 
-public enum stanRezerwacji
+public enum StanRezerwacji
 {
     Zarezerwowana,
     Anulowana,

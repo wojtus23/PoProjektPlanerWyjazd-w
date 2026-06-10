@@ -24,14 +24,14 @@ public class Atrakcja : PunktHarmonogramu, IWymagaRezerwacji
 
     public bool WykonajRezerwacje()
     {
-        stanRezerwacji = stanRezerwacji.Zarezerwowana;
+        stanRezerwacji = StanRezerwacji.Zarezerwowana;
         Console.WriteLine($"Rezerwacja atrakcji '{nazwa}' przebiegła pomyślnie.");
         return true;
     }
 
     public bool AnulujRezerwacje()
     {
-        stanRezerwacji = stanRezerwacji.Anulowana;
+        stanRezerwacji = StanRezerwacji.Anulowana;
         Console.WriteLine($"Anulowano rezerwację atrakcji '{nazwa}'.");
         return true;
     }
