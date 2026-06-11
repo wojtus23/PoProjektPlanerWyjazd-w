@@ -42,11 +42,4 @@ public class Uczestnik
     {
         return $"{Imie} {Nazwisko} ({wiek} lat)";
     }
-    
-    /// @brief Sprawdza, czy uczestnik jest pełnoletni.
-    /// @return Zwraca true, jeśli uczestnik ma co najmniej 18 lat, w przeciwnym razie false.
-    public bool CzyJestPelnoletni()
-    {
-        return wiek >= 18;
-    }
 }
